@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Master Poster A1 — SoukDZ IDS</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & ROOT ─────────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0b1a3b;
+  --gold:#c9973a;
+  --g1-bg:#f1f5f9;--g1-hd:#cbd5e1;--g1-txt:#1e293b;
+  --g2-bg:#eff6ff;--g2-hd:#bfdbfe;--g2-txt:#1e40af;
+  --g3-bg:#f0fdf4;--g3-hd:#bbf7d0;--g3-txt:#14532d;
+  --g4-bg:#fffbeb;--g4-hd:#fde68a;--g4-txt:#92400e;
+  --gs-bg:#f5f3ff;--gs-hd:#ddd6fe;--gs-txt:#4c1d95;
+}
+
+/* ── SCREEN & PRINT SETUP ─────────────────────────────────── */
+/* A1 portrait: 594mm × 841mm
+   At 96dpi: 2245px × 3179px
+   Screen preview scaled to 800px wide */
+html,body{width:100%;background:#ccc;display:flex;justify-content:center;padding:16px;font-family:'IBM Plex Sans',sans-serif}
+
+.poster{
+  width:800px;
+  background:#fff;
+  display:flex;flex-direction:column;
+  box-shadow:0 6px 32px rgba(0,0,0,0.3);
+}
+
+@media print{
+  @page{size:A1 portrait;margin:0}
+  html,body{background:#fff;padding:0;display:block}
+  .poster{width:100%;box-shadow:none}
+}
+
+/* ── HEADER ───────────────────────────────────────────────── */
+.hd{
+  background:var(--navy);
+  padding:14px 22px 12px;
+  display:flex;flex-direction:column;gap:7px;
+}
+.hd-top{display:flex;justify-content:space-between;align-items:center}
+.badges{display:flex;gap:7px;align-items:center}
+.badge{
+  font-size:7px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;
+}
+.badge-gold{color:var(--navy);background:var(--gold)}
+.badge-out{color:var(--gold);border:1px solid var(--gold)}
+.badge-dim{color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.2)}
+.hd-right{font-size:7px;color:rgba(255,255,255,0.4);font-weight:300;letter-spacing:.3px}
+.hd-pretitle{font-size:7px;font-weight:500;color:var(--gold);letter-spacing:1.1px;text-transform:uppercase}
+.hd-title{
+  font-family:'Playfair Display',serif;font-weight:900;
+  font-size:17.5px;color:#fff;line-height:1.22;max-width:680px;
+}
+.hd-case{
+  font-family:'Playfair Display',serif;font-size:11px;
+  color:var(--gold);font-style:italic;margin-top:1px;
+}
+.hd-bottom{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  border-top:1px solid rgba(255,255,255,0.1);padding-top:8px;margin-top:2px;
+}
+.hd-people{display:flex;gap:22px}
+.pip{display:flex;flex-direction:column;gap:1px}
+.pip-lbl{font-size:6.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.9px}
+.pip-val{font-size:9px;color:rgba(255,255,255,0.88);font-weight:500}
+.yr{background:var(--gold);color:var(--navy);font-size:8.5px;font-weight:700;padding:4px 11px;border-radius:2px;letter-spacing:.4px}
+
+/* ── BODY ─────────────────────────────────────────────────── */
+.body{display:flex;flex:1}
+.cl{width:178px;border-right:1px solid #e8e8e8;padding:10px 9px;display:flex;flex-direction:column;gap:8px}
+.cm{flex:1;border-right:1px solid #e8e8e8;padding:10px 9px;display:flex;flex-direction:column;gap:8px}
+.cr{width:178px;padding:10px 9px;display:flex;flex-direction:column;gap:8px}
+
+/* ── SECTION ──────────────────────────────────────────────── */
+.sec{display:flex;flex-direction:column;gap:5px}
+.sec-hd{display:flex;align-items:center;gap:5px;border-bottom:1.5px solid var(--navy);padding-bottom:3px}
+.sec-n{
+  width:14px;height:14px;background:var(--navy);color:var(--gold);
+  font-size:7px;font-weight:700;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.sec-t{font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--navy)}
+
+/* ── TYPOGRAPHY ───────────────────────────────────────────── */
+.bt{font-size:8px;color:#2d2d2d;line-height:1.5;font-weight:400}
+.hl{color:var(--navy);font-weight:600}
+
+/* ── ATTACK ITEMS ─────────────────────────────────────────── */
+.atk{
+  display:flex;align-items:center;gap:5px;
+  background:#f7f9fc;border-left:3px solid var(--navy);
+  padding:3px 6px;border-radius:0 2px 2px 0;margin-bottom:2px;
+}
+.atk-code{font-size:7px;font-weight:700;color:var(--navy);font-family:'IBM Plex Mono',monospace;min-width:16px}
+.atk-name{font-size:7.5px;font-weight:600;color:#111;display:block}
+.atk-sub{font-size:6.5px;color:#666;display:block;line-height:1.2}
+
+/* ── EVIDENCE TABLE ───────────────────────────────────────── */
+.ev-t{width:100%;border-collapse:collapse;font-size:7px}
+.ev-t th{background:var(--navy);color:#fff;padding:3px 4px;font-size:6.5px;font-weight:600;letter-spacing:.4px}
+.ev-t td{padding:3px 4px;border-bottom:.5px solid #eee;line-height:1.3;color:#333;vertical-align:top}
+.ev-t tr:nth-child(even) td{background:#f8f9fc}
+.tn{font-size:6px;background:#dbeafe;color:#1e40af;padding:1px 3px;border-radius:2px;font-weight:600;white-space:nowrap}
+.ta{font-size:6px;background:#dcfce7;color:#166534;padding:1px 3px;border-radius:2px;font-weight:600;white-space:nowrap}
+
+/* ── GAP BOXES ────────────────────────────────────────────── */
+.gap{border-left:3px solid #dc2626;background:#fef2f2;padding:5px 7px;border-radius:0 3px 3px 0;margin-bottom:3px}
+.gap-t{font-size:7.5px;font-weight:700;color:#dc2626;margin-bottom:1px}
+.gap-b{font-size:7px;color:#374151;line-height:1.4}
+
+/* ── COMP TABLE (MAIN) ────────────────────────────────────── */
+.ct{width:100%;border-collapse:collapse;font-size:7px}
+.ct thead th{
+  background:var(--navy);color:#fff;
+  padding:3.5px 3px;text-align:center;font-weight:600;font-size:6.5px;
+  letter-spacing:.2px;white-space:nowrap;
+}
+.ct thead th:nth-child(2),.ct thead th:nth-child(3){text-align:left}
+.ct td{padding:2.5px 3px;border-bottom:.5px solid rgba(0,0,0,0.05);vertical-align:middle;text-align:center;color:#222}
+.rc{font-size:6.5px;color:#444;line-height:1.3;text-align:left}
+.rc strong{color:var(--navy);font-size:7px}
+.mc{font-family:'IBM Plex Mono',monospace;font-size:6px;color:#333;text-align:left}
+.dc{font-size:6px;color:#555;font-style:italic}
+
+/* Score colours */
+.sg{color:#166534;font-weight:700;font-size:7.5px}
+.sm{color:#92400e;font-weight:600;font-size:7px}
+.sl{color:#991b1b;font-weight:600;font-size:7px}
+.sp{color:#4c1d95;font-weight:800;font-size:8.5px}
+.na{color:#9ca3af;font-size:6.5px}
+
+.cl-{font-size:6px;color:#6b7280}
+.cm-{font-size:6px;color:#d97706;font-weight:600}
+.ch-{font-size:6px;color:#dc2626;font-weight:600}
+.xf{font-size:6px;color:#166534;font-weight:700}
+.xn{font-size:6px;color:#9ca3af}
+.xp{font-size:6px;color:#4c1d95;font-weight:800}
+
+/* Gen row groups */
+.gh td{font-size:6.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:3px 3px 2px}
+.r1 td{background:var(--g1-bg)} .r1 .gh td{background:var(--g1-hd);color:var(--g1-txt)}
+.r2 td{background:var(--g2-bg)} .r2 .gh td{background:var(--g2-hd);color:var(--g2-txt)}
+.r3 td{background:var(--g3-bg)} .r3 .gh td{background:var(--g3-hd);color:var(--g3-txt)}
+.r4 td{background:var(--g4-bg)} .r4 .gh td{background:var(--g4-hd);color:var(--g4-txt)}
+.rs td{background:var(--gs-bg)} .rs .gh td{background:var(--gs-hd);color:var(--gs-txt)}
+
+.glbl{
+  writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);
+  font-size:6px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
+  color:#fff;padding:2px 1px;border-radius:1px;text-align:center;min-width:12px;
+}
+.gl1{background:#94a3b8}.gl2{background:#3b82f6}.gl3{background:#22c55e}.gl4{background:#f59e0b}.gls{background:#8b5cf6}
+.star-top td{border-top:2px solid #8b5cf6}
+
+/* ── F1 BARS ──────────────────────────────────────────────── */
+.bar-row{display:flex;align-items:center;gap:5px;margin-bottom:3.5px}
+.bar-lbl{font-size:7px;color:#374151;min-width:78px;font-weight:500;line-height:1.2}
+.bar-wrap{flex:1;background:#e8e8e8;border-radius:1px;height:11px;position:relative}
+.bar{height:100%;border-radius:1px;display:flex;align-items:center;justify-content:flex-end;padding-right:3px}
+.bar-v{font-size:6px;font-weight:700;color:#fff}
+
+/* ── ARCH LAYERS ──────────────────────────────────────────── */
+.arch{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:3px;padding:7px 9px}
+.arch-t{font-size:7px;font-weight:700;color:#4c1d95;text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px}
+.lyr{display:flex;align-items:flex-start;gap:5px;padding:3.5px 5px;margin-bottom:2px;border-radius:2px}
+.lbdg{font-size:6.5px;font-weight:700;color:#fff;padding:2px 5px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.l1c{background:#1d4ed8}.l2c{background:#059669}.lcc{background:#7c3aed}.lxc{background:#b45309}
+.ldsc{font-size:7.5px;color:#374151;line-height:1.4}
+.ldsc strong{color:#111}
+
+/* ── RESULT CARDS ─────────────────────────────────────────── */
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.rc2{
+  background:var(--navy);border-radius:3px;padding:6px;
+  display:flex;flex-direction:column;align-items:center;gap:1px;
+}
+.rc2-n{font-family:'Playfair Display',serif;font-size:16px;font-weight:900;color:var(--gold);line-height:1}
+.rc2-l{font-size:6px;color:rgba(255,255,255,0.65);text-align:center;font-weight:300;line-height:1.3}
+
+/* ── PERSPECTIVES ─────────────────────────────────────────── */
+.pi{display:flex;align-items:flex-start;gap:4px;margin-bottom:2.5px}
+.pd{width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:3px;flex-shrink:0}
+.pt{font-size:7.5px;color:#374151;line-height:1.4}
+
+/* ── CONCLUSION ───────────────────────────────────────────── */
+.con{background:var(--navy);border-radius:3px;padding:8px 10px}
+.con-t{font-size:7.5px;color:rgba(255,255,255,0.88);line-height:1.5;font-style:italic}
+.con-t strong{color:var(--gold);font-style:normal}
+
+/* ── LEGEND CHIPS ─────────────────────────────────────────── */
+.legend{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}
+.lchip{display:flex;align-items:center;gap:2px}
+.lchip-dot{width:9px;height:9px;border-radius:1px;flex-shrink:0}
+.lchip-txt{font-size:6.5px;color:#555}
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+.ft{background:var(--navy);padding:7px 22px;display:flex;justify-content:space-between;align-items:center}
+.ft-l{font-size:7px;color:rgba(255,255,255,0.45)}
+.ft-c{font-size:7.5px;color:var(--gold);font-weight:600;letter-spacing:.4px}
+.ft-r{font-size:6.5px;color:rgba(255,255,255,0.35)}
+</style>
+</head>
+<body>
+<div class="poster">
+
+<!-- HEADER -->
+<div class="hd">
+  <div class="hd-top">
+    <div class="badges">
+      <span class="badge badge-gold">ESTIN — Bejaia</span>
+      <span class="badge badge-out">LITAN Laboratory</span>
+      <span class="badge badge-dim">Master · Cybersecurity</span>
+      <span class="badge badge-dim">Université Paris Cité</span>
+    </div>
+    <div class="hd-right">RN 75, Amizour 06300, Bejaia, Algeria</div>
+  </div>
+  <div>
+    <div class="hd-pretitle">Master Thesis Poster Presentation — Comparative Study</div>
+    <div class="hd-title">Design and Systematic Comparative Evaluation of a Multi-Modal Intelligent Intrusion Detection System for Second-Hand E-Commerce Marketplaces</div>
+    <div class="hd-case">— The SoukDZ Case Study —</div>
+  </div>
+  <div class="hd-bottom">
+    <div class="hd-people">
+      <div class="pip"><span class="pip-lbl">Student</span><span class="pip-val" style="font-family:'Playfair Display',serif;font-size:10.5px">Kiouaz Selssabila</span></div>
+      <div class="pip"><span class="pip-lbl">Local Supervisor</span><span class="pip-val">Mme Amara Karima — ESTIN / LITAN</span></div>
+      <div class="pip"><span class="pip-lbl">Co-Supervisor</span><span class="pip-val">Pr. Naït Abdesselam Farid — Univ. Paris Cité</span></div>
+    </div>
+    <div class="yr">2025 — 2026</div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body">
+
+  <!-- LEFT COLUMN -->
+  <div class="cl">
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">1</div><div class="sec-t">Abstract</div></div>
+      <p class="bt">Second-hand e-commerce marketplaces face a <span class="hl">hybrid threat landscape</span> in which every major attack simultaneously leaves evidence at both the network and application layers. Conventional IDS systems, operating at a single layer, are structurally insufficient.</p>
+      <p class="bt">This work presents a <span class="hl">systematic comparative study of 24 IDS methods across four generations</span> (1994–2026), evaluated on six performance dimensions. Three structural gaps are identified and addressed through a novel multi-modal cross-layer architecture validated with real Kali Linux attack campaigns.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">2</div><div class="sec-t">5 Attack Scenarios</div></div>
+      <div class="atk" style="border-color:#dc2626"><div class="atk-code" style="color:#dc2626">S1</div><div><span class="atk-name">Brute Force</span><span class="atk-sub">Hydra v9.5 · T1110.001</span></div></div>
+      <div class="atk" style="border-color:#d97706"><div class="atk-code" style="color:#d97706">S2</div><div><span class="atk-name">Credential Stuffing</span><span class="atk-sub">Distributed IPs · T1110.004</span></div></div>
+      <div class="atk" style="border-color:#7c3aed"><div class="atk-code" style="color:#7c3aed">S3</div><div><span class="atk-name">Reconnaissance</span><span class="atk-sub">Nikto v2.5.0 · T1595.002</span></div></div>
+      <div class="atk" style="border-color:#0891b2"><div class="atk-code" style="color:#0891b2">S4</div><div><span class="atk-name">Catalog Scraping</span><span class="atk-sub">Python scripts · T1020</span></div></div>
+      <div class="atk" style="border-color:#059669"><div class="atk-code" style="color:#059669">S5</div><div><span class="atk-name">Fake Accounts</span><span class="atk-sub">Mass registration · T1136</span></div></div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">3</div><div class="sec-t">Dual-Layer Evidence</div></div>
+      <table class="ev-t">
+        <tr><th style="text-align:left">Attack</th><th>Network Layer</th><th>App Layer</th></tr>
+        <tr><td>Brute Force</td><td><span class="tn">req_rate↑ · Hydra UA</span></td><td><span class="ta">failed_logins↑</span></td></tr>
+        <tr><td>Stuffing</td><td><span class="tn">Distributed IPs</span></td><td><span class="ta">logins across wins</span></td></tr>
+        <tr><td>Recon</td><td><span class="tn">Port variety</span></td><td><span class="ta">scan_score↑ (404s)</span></td></tr>
+        <tr><td>Scraping</td><td><span class="tn">High rate · short pkts</span></td><td><span class="ta">listing_reqs↑</span></td></tr>
+        <tr><td>Fake Accts</td><td><span class="tn">Form POSTs</span></td><td><span class="ta">new_accounts↑</span></td></tr>
+      </table>
+      <p class="bt" style="margin-top:3px;font-style:italic;color:#666;font-size:7px">→ A single-layer IDS is structurally insufficient. Cross-layer correlation is essential.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">4</div><div class="sec-t">Three Research Gaps</div></div>
+      <div class="gap">
+        <div class="gap-t">Gap 1 — Network-Application Divide</div>
+        <div class="gap-b">All 24 reviewed systems operate at a single layer. Cross-layer behavioral correlation is entirely absent from the published literature.</div>
+      </div>
+      <div class="gap" style="border-color:#d97706;background:#fffbeb">
+        <div class="gap-t" style="color:#d97706">Gap 2 — Lack of Domain Specificity</div>
+        <div class="gap-b">Generic benchmarks do not capture marketplace behavioral patterns (rating manipulation, catalog scraping, coordinated fake accounts).</div>
+      </div>
+      <div class="gap" style="border-color:#7c3aed;background:#f5f3ff">
+        <div class="gap-t" style="color:#7c3aed">Gap 3 — Opaque Model Outputs</div>
+        <div class="gap-b">Only 2 of 24 reviewed methods provide full per-alert explainability. Analysts cannot act reliably on unexplained probability scores.</div>
+      </div>
+    </div>
+
+  </div><!-- /left -->
+
+  <!-- MIDDLE COLUMN -->
+  <div class="cm">
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">5</div><div class="sec-t">Systematic Comparative Study — 24 Published Methods Across Four Generations (1994–2026)</div></div>
+
+      <table class="ct">
+        <thead>
+          <tr>
+            <th style="width:12px"></th>
+            <th style="text-align:left;min-width:72px">Reference · Year</th>
+            <th style="text-align:left;min-width:82px">Method</th>
+            <th>Dataset</th>
+            <th>F1</th>
+            <th>AUC</th>
+            <th>DR</th>
+            <th>FPR</th>
+            <th>Cost</th>
+            <th>XAI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- GEN 1 -->
+          <tr class="r1 gh"><td><div class="glbl gl1">G1</div></td><td colspan="9" style="padding-left:2px">Classical Statistical Methods (1994 – 2009) · Mean F1 ≈ 0.72 · FPR &gt; 15%</td></tr>
+          <tr class="r1"><td></td><td class="rc"><strong>Denning</strong> 1987</td><td class="mc">IDES · Expert rules</td><td class="dc">Custom</td><td class="na">n/a</td><td class="na">n/a</td><td class="sl">0.72</td><td class="sl">&gt;0.15</td><td class="cl-">Low</td><td class="xn">Partial</td></tr>
+          <tr class="r1"><td></td><td class="rc"><strong>KDD Cup</strong> 1999</td><td class="mc">C4.5 Decision Tree</td><td class="dc">KDD99</td><td class="sm">0.87</td><td class="na">n/a</td><td class="sm">0.92</td><td class="sm">0.08</td><td class="cl-">Low</td><td class="xn">Partial</td></tr>
+          <tr class="r1"><td></td><td class="rc"><strong>Tavallaee</strong> 2009</td><td class="mc">RF Baseline · dedup.</td><td class="dc">NSL-KDD</td><td class="sm">0.78</td><td class="na">n/a</td><td class="sm">0.85</td><td class="sm">0.12</td><td class="cl-">Low</td><td class="xn">None</td></tr>
+
+          <!-- GEN 2 -->
+          <tr class="r2 gh"><td><div class="glbl gl2">G2</div></td><td colspan="9">ML Ensemble Methods (2009 – 2018) · Mean F1 ≈ 0.93 · FPR 3–8% · Single-layer · No XAI</td></tr>
+          <tr class="r2"><td></td><td class="rc"><strong>Boro &amp; Neha</strong> 2012</td><td class="mc">Random Forest</td><td class="dc">NSL-KDD</td><td class="sg">0.94</td><td class="sg">0.97</td><td class="sg">0.96</td><td class="sg">0.04</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+          <tr class="r2"><td></td><td class="rc"><strong>Aburomman</strong> 2016</td><td class="mc">SVM Ensemble</td><td class="dc">NSL-KDD</td><td class="sg">0.92</td><td class="sg">0.95</td><td class="sg">0.93</td><td class="sm">0.06</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+          <tr class="r2"><td></td><td class="rc"><strong>Sharafaldin</strong> 2018</td><td class="mc">RF · DDoS category</td><td class="dc">CICIDS2017</td><td class="sg">0.97</td><td class="sg">0.99</td><td class="sg">0.98</td><td class="sg">0.01</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+          <tr class="r2"><td></td><td class="rc"><strong>Sharafaldin</strong> 2018</td><td class="mc">RF · Infiltration</td><td class="dc">CICIDS2017</td><td class="sl">0.68</td><td class="sm">0.81</td><td class="sl">0.70</td><td class="sm">0.08</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+          <tr class="r2"><td></td><td class="rc"><strong>Yerlan et al.</strong> 2018</td><td class="mc">XGBoost</td><td class="dc">NSL-KDD</td><td class="sg">0.96</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.03</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+          <tr class="r2"><td></td><td class="rc"><strong>Farnaaz</strong> 2016</td><td class="mc">RF · multi-class</td><td class="dc">NSL-KDD</td><td class="sg">0.95</td><td class="sg">0.97</td><td class="sg">0.96</td><td class="sg">0.04</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+
+          <!-- GEN 3 -->
+          <tr class="r3 gh"><td><div class="glbl gl3">G3</div></td><td colspan="9">Deep Learning Architectures (2018 – 2022) · Mean F1 ≈ 0.95 · High GPU cost · Opaque outputs</td></tr>
+          <tr class="r3"><td></td><td class="rc"><strong>Kim et al.</strong> 2016</td><td class="mc">LSTM · temporal seq.</td><td class="dc">NSL-KDD</td><td class="sg">0.95</td><td class="sg">0.97</td><td class="sg">0.95</td><td class="sg">0.04</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r3"><td></td><td class="rc"><strong>Yin et al.</strong> 2017</td><td class="mc">RNN · multi-class</td><td class="dc">NSL-KDD</td><td class="sg">0.95</td><td class="sg">0.97</td><td class="sg">0.96</td><td class="sg">0.04</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r3"><td></td><td class="rc"><strong>Wu et al.</strong> 2021</td><td class="mc">Transformer · attn.</td><td class="dc">CICIDS2017</td><td class="sg">0.97</td><td class="sg">0.99</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r3"><td></td><td class="rc"><strong>Andresini</strong> 2020</td><td class="mc">CNN + LSTM</td><td class="dc">CICIDS2017</td><td class="sg">0.96</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r3"><td></td><td class="rc"><strong>Vinayakumar</strong> 2019</td><td class="mc">Deep MLP</td><td class="dc">NSL-KDD+CIC</td><td class="sg">0.97</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
+
+          <!-- GEN 4 -->
+          <tr class="r4 gh"><td><div class="glbl gl4">G4</div></td><td colspan="9">Hybrid &amp; Explainable Systems (2022 – 2026) · Mean F1 ≈ 0.97 · Still single-layer</td></tr>
+          <tr class="r4"><td></td><td class="rc"><strong>Faker &amp; Dogru</strong> 2023</td><td class="mc">RF + Autoencoder</td><td class="dc">CICIDS2018</td><td class="sg">0.98</td><td class="sg">0.99</td><td class="sg">0.99</td><td class="sg">0.01</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r4"><td></td><td class="rc"><strong>Das et al.</strong> 2022</td><td class="mc">GAN + RF</td><td class="dc">NSL-KDD</td><td class="sg">0.97</td><td class="sg">0.98</td><td class="sg">0.98</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r4"><td></td><td class="rc"><strong>Krishnan</strong> 2023</td><td class="mc">XGBoost + SHAP</td><td class="dc">CICIDS2017</td><td class="sg">0.97</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="cm-">Med</td><td class="xf">Full ✓</td></tr>
+          <tr class="r4"><td></td><td class="rc"><strong>Ngo et al.</strong> 2023</td><td class="mc">CNN + RF Ensemble</td><td class="dc">UNSW-NB15</td><td class="sg">0.96</td><td class="sg">0.97</td><td class="sg">0.97</td><td class="sg">0.03</td><td class="ch-">High</td><td class="xn">None</td></tr>
+          <tr class="r4"><td></td><td class="rc"><strong>Bahnsen</strong> 2016</td><td class="mc">RF + temporal (e-comm)</td><td class="dc">Proprietary</td><td class="sg">0.94</td><td class="sg">0.96</td><td class="sg">0.95</td><td class="sg">0.04</td><td class="cm-">Med</td><td class="xn">None</td></tr>
+          <tr class="r4"><td></td><td class="rc"><strong>Rahman</strong> 2024</td><td class="mc">Best ensemble · survey</td><td class="dc">Multi-dataset</td><td class="sg">0.98</td><td class="sg">0.99</td><td class="sg">0.99</td><td class="sg">0.01</td><td class="ch-">High</td><td class="xn">Partial</td></tr>
+
+          <!-- SOUKDZ -->
+          <tr class="rs gh star-top"><td><div class="glbl gls">OUR</div></td><td colspan="9" style="color:#4c1d95;font-size:7px">SoukDZ Multi-Modal IDS — This Work (2026) · Cross-layer · Domain-specific · Full XAI</td></tr>
+          <tr class="rs star-top"><td></td><td class="rc"><strong>SoukDZ</strong> Layer 1</td><td class="mc">RF · SMOTE · SHAP</td><td class="dc">CICIDS2017</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">0.000</td><td class="cm-">Med</td><td class="xp">Full ★</td></tr>
+          <tr class="rs"><td></td><td class="rc"><strong>SoukDZ</strong> Layer 2</td><td class="mc">RF · SMOTE · SHAP</td><td class="dc">SoukDZ Logs</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">0.000</td><td class="cl-">Low</td><td class="xp">Full ★</td></tr>
+        </tbody>
+      </table>
+
+      <div class="legend">
+        <div class="lchip"><div class="lchip-dot" style="background:#94a3b8"></div><span class="lchip-txt">Gen 1 — Classical</span></div>
+        <div class="lchip"><div class="lchip-dot" style="background:#3b82f6"></div><span class="lchip-txt">Gen 2 — ML Ensembles</span></div>
+        <div class="lchip"><div class="lchip-dot" style="background:#22c55e"></div><span class="lchip-txt">Gen 3 — Deep Learning</span></div>
+        <div class="lchip"><div class="lchip-dot" style="background:#f59e0b"></div><span class="lchip-txt">Gen 4 — Hybrid</span></div>
+        <div class="lchip"><div class="lchip-dot" style="background:#8b5cf6"></div><span class="lchip-txt">SoukDZ — This Work</span></div>
+        <span class="lchip-txt" style="margin-left:4px">· DR = Detection Rate &nbsp;|&nbsp; FPR = False Positive Rate &nbsp;|&nbsp; XAI = Explainability</span>
+      </div>
+    </div>
+
+  </div><!-- /mid -->
+
+  <!-- RIGHT COLUMN -->
+  <div class="cr">
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">6</div><div class="sec-t">F1-Score Evolution</div></div>
+      <div class="bar-row"><div class="bar-lbl">Gen 1 · Classical</div><div class="bar-wrap"><div class="bar" style="width:72%;background:#94a3b8"><span class="bar-v">0.72</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Gen 2 · ML Ensembles</div><div class="bar-wrap"><div class="bar" style="width:93%;background:#3b82f6"><span class="bar-v">0.93</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Gen 3 · Deep Learning</div><div class="bar-wrap"><div class="bar" style="width:95%;background:#22c55e"><span class="bar-v">0.95</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl">Gen 4 · Hybrid</div><div class="bar-wrap"><div class="bar" style="width:97%;background:#f59e0b"><span class="bar-v">0.97</span></div></div></div>
+      <div class="bar-row"><div class="bar-lbl" style="font-weight:700;color:#4c1d95">SoukDZ · This Work</div><div class="bar-wrap"><div class="bar" style="width:100%;background:#8b5cf6"><span class="bar-v">1.000</span></div></div></div>
+      <p class="bt" style="font-size:7px;font-style:italic;color:#555;margin-top:2px">F1 improved from 0.72 (1994) to 0.97 (2026). <strong style="color:#4c1d95">SoukDZ achieves the theoretical maximum on both layers simultaneously.</strong> FPR fell from &gt;15% (Gen 1) to 0% (SoukDZ).</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">7</div><div class="sec-t">Proposed Architecture</div></div>
+      <div class="arch">
+        <div class="arch-t">SoukDZ Multi-Modal IDS</div>
+        <div class="lyr" style="background:#eff6ff"><span class="lbdg l1c">L1</span><div class="ldsc"><strong>Network</strong> · Scapy → 7 features/60s → RF on CICIDS2017 → S<sub>L1</sub></div></div>
+        <div class="lyr" style="background:#f0fdf4"><span class="lbdg l2c">L2</span><div class="ldsc"><strong>Behavioral</strong> · Apache logs → 8 features/5min → RF+SMOTE → S<sub>L2</sub></div></div>
+        <div class="lyr" style="background:#f5f3ff"><span class="lbdg lcc">Corr</span><div class="ldsc"><strong>Correlation</strong> · S<sub>final</sub> = 0.6·S<sub>L2</sub> + 0.4·S<sub>L1</sub> → 4-tier alerts</div></div>
+        <div class="lyr" style="background:#fffbeb"><span class="lbdg lxc">XAI</span><div class="ldsc"><strong>Explainability</strong> · SHAP TreeSHAP → per-alert attribution dashboard</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">8</div><div class="sec-t">Key Experimental Results</div></div>
+      <div class="rg">
+        <div class="rc2"><div class="rc2-n">1.000</div><div class="rc2-l">F1 &amp; AUC both layers</div></div>
+        <div class="rc2"><div class="rc2-n">100%</div><div class="rc2-l">Detection rate · 5 Kali scenarios</div></div>
+        <div class="rc2"><div class="rc2-n" style="font-size:13px">0 FP</div><div class="rc2-l">Against 4,861 legit entries</div></div>
+        <div class="rc2"><div class="rc2-n" style="font-size:13px">10s</div><div class="rc2-l">Detection delay · all scenarios</div></div>
+      </div>
+      <div style="margin-top:4px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:2px;padding:4px 7px">
+        <p style="font-size:7px;color:#14532d;line-height:1.5"><strong>Layer 1</strong> CICIDS2017: n=70,133 · Brute Force, DDoS, PortScan<br><strong>Layer 2</strong> SoukDZ: n=71 windows · RF, SVM, KNN, DT all F1=1.000<br><strong>Campaign</strong> 24 May 2026 · Hydra v9.5, Nikto v2.5.0, Python</p>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">9</div><div class="sec-t">Research Perspectives</div></div>
+      <div class="pi"><div class="pd"></div><div class="pt">Production data retraining on real SoukDZ logs (60 days post-deployment)</div></div>
+      <div class="pi"><div class="pd"></div><div class="pt">Streaming log-tailing to reduce detection latency below 1 second</div></div>
+      <div class="pi"><div class="pd"></div><div class="pt">Federated learning across multiple e-commerce platforms</div></div>
+      <div class="pi"><div class="pd"></div><div class="pt">Graph Neural Networks for fraud ring detection</div></div>
+      <div class="pi"><div class="pd"></div><div class="pt">Adversarial robustness against threshold-aware evasion</div></div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-hd"><div class="sec-n">10</div><div class="sec-t">Conclusion</div></div>
+      <div class="con">
+        <div class="con-t">This is the <strong>first IDS system simultaneously addressing cross-layer correlation, marketplace domain specificity, and full SHAP explainability</strong>. The comparative study confirms that F1 performance has plateaued at 0.97–0.98 in Generation 4. The remaining frontier is architectural: <strong>no published system fuses network and application behavioral signals for a marketplace threat model</strong>. SoukDZ fills this gap with a deployable, explainable, production-ready architecture.</div>
+      </div>
+    </div>
+
+  </div><!-- /right -->
+</div><!-- /body -->
+
+<!-- FOOTER -->
+<div class="ft">
+  <div class="ft-l">ESTIN — Laboratoire LITAN · RN 75, Amizour 06300, Bejaia, Algeria</div>
+  <div class="ft-c">Master in Computer Science — Cybersecurity · 2025–2026</div>
+  <div class="ft-r">Supervisors: Mme Amara Karima (ESTIN) · Pr. Naït Abdesselam Farid (Univ. Paris Cité)</div>
+</div>
+
+</div><!-- /poster -->
+</body>
+</html>
