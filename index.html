@@ -2,208 +2,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Master Poster  — SoukDZ IDS</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Master Poster A1 — SoukDZ IDS</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ── RESET & ROOT ─────────────────────────────────────────── */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --navy:#0b1a3b;
-  --gold:#c9973a;
-  --g1-bg:#f1f5f9;--g1-hd:#cbd5e1;--g1-txt:#1e293b;
-  --g2-bg:#eff6ff;--g2-hd:#bfdbfe;--g2-txt:#1e40af;
-  --g3-bg:#f0fdf4;--g3-hd:#bbf7d0;--g3-txt:#14532d;
-  --g4-bg:#fffbeb;--g4-hd:#fde68a;--g4-txt:#92400e;
-  --gs-bg:#f5f3ff;--gs-hd:#ddd6fe;--gs-txt:#4c1d95;
+  --navy:#0b1a3b;--gold:#c9973a;--white:#fff;
+  --g1:#94a3b8;--g2:#3b82f6;--g3:#22c55e;--g4:#f59e0b;--gs:#8b5cf6;
+  --red:#dc2626;--orange:#d97706;--purple:#7c3aed;
+  --bg1:#f1f5f9;--bg2:#eff6ff;--bg3:#f0fdf4;--bg4:#fffbeb;--bgs:#f5f3ff;
 }
+html,body{background:#bbb;display:flex;justify-content:center;padding:16px;font-family:'Inter',sans-serif}
+.poster{width:800px;background:#f8f9fa;display:flex;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,0.35)}
 
-/* ── SCREEN & PRINT SETUP ─────────────────────────────────── */
-/* A1 portrait: 594mm × 841mm
-   At 96dpi: 2245px × 3179px
-   Screen preview scaled to 800px wide */
-html,body{width:100%;background:#ccc;display:flex;justify-content:center;padding:16px;font-family:'IBM Plex Sans',sans-serif}
+/* HEADER */
+.hd{background:linear-gradient(135deg,#0b1a3b 0%,#1a3570 100%);padding:16px 24px 14px;position:relative;overflow:hidden}
+.hd::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(201,151,58,0.07)}
+.hd-row1{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.badges{display:flex;gap:6px}
+.badge{font-size:6.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:2px}
+.bg{color:#0b1a3b;background:var(--gold)}
+.bw{color:var(--gold);border:1px solid var(--gold)}
+.bd{color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.2)}
+.hd-year{font-size:8px;color:rgba(255,255,255,0.4)}
+.hd-pre{font-size:6.5px;color:var(--gold);font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px}
+.hd-title{font-family:'Playfair Display',serif;font-weight:900;font-size:17px;color:#fff;line-height:1.2;max-width:650px}
+.hd-case{font-family:'Playfair Display',serif;font-size:10px;color:var(--gold);font-style:italic;margin-top:2px}
+.hd-bot{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(255,255,255,0.1);padding-top:8px;margin-top:8px}
+.hd-people{display:flex;gap:20px}
+.hp{display:flex;flex-direction:column}
+.hl{font-size:6px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.8px}
+.hv{font-size:8.5px;color:rgba(255,255,255,0.88);font-weight:500}
+.hv.big{font-family:'Playfair Display',serif;font-size:10px}
 
-.poster{
-  width:800px;
-  background:#fff;
-  display:flex;flex-direction:column;
-  box-shadow:0 6px 32px rgba(0,0,0,0.3);
-}
+/* BODY */
+.body{display:flex;flex:1;gap:0}
+.cl{width:198px;flex-shrink:0;padding:10px 9px;display:flex;flex-direction:column;gap:8px;border-right:1px solid #e2e8f0;background:#fff}
+.cm{flex:1;padding:10px 9px;display:flex;flex-direction:column;gap:8px;background:#f8fafc}
+.cr2{width:186px;flex-shrink:0;padding:10px 9px;display:flex;flex-direction:column;gap:8px;border-left:1px solid #e2e8f0;background:#fff}
 
-@media print{
-  @page{size:A1 portrait;margin:0}
-  html,body{background:#fff;padding:0;display:block}
-  .poster{width:100%;box-shadow:none}
-}
+/* SECTION HEADER */
+.sh{display:flex;align-items:center;gap:5px;margin-bottom:4px}
+.sn{width:15px;height:15px;background:var(--navy);color:var(--gold);font-size:7px;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.st{font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--navy)}
+.divl{height:1.5px;background:var(--navy);border-radius:1px;flex:1}
+.bt{font-size:7.5px;color:#374151;line-height:1.55}
+.hl2{color:var(--navy);font-weight:700}
 
-/* ── HEADER ───────────────────────────────────────────────── */
-.hd{
-  background:var(--navy);
-  padding:14px 22px 12px;
-  display:flex;flex-direction:column;gap:7px;
-}
-.hd-top{display:flex;justify-content:space-between;align-items:center}
-.badges{display:flex;gap:7px;align-items:center}
-.badge{
-  font-size:7px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;
-  padding:3px 9px;border-radius:2px;
-}
-.badge-gold{color:var(--navy);background:var(--gold)}
-.badge-out{color:var(--gold);border:1px solid var(--gold)}
-.badge-dim{color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.2)}
-.hd-right{font-size:7px;color:rgba(255,255,255,0.4);font-weight:300;letter-spacing:.3px}
-.hd-pretitle{font-size:7px;font-weight:500;color:var(--gold);letter-spacing:1.1px;text-transform:uppercase}
-.hd-title{
-  font-family:'Playfair Display',serif;font-weight:900;
-  font-size:17.5px;color:#fff;line-height:1.22;max-width:680px;
-}
-.hd-case{
-  font-family:'Playfair Display',serif;font-size:11px;
-  color:var(--gold);font-style:italic;margin-top:1px;
-}
-.hd-bottom{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  border-top:1px solid rgba(255,255,255,0.1);padding-top:8px;margin-top:2px;
-}
-.hd-people{display:flex;gap:22px}
-.pip{display:flex;flex-direction:column;gap:1px}
-.pip-lbl{font-size:6.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.9px}
-.pip-val{font-size:9px;color:rgba(255,255,255,0.88);font-weight:500}
-.yr{background:var(--gold);color:var(--navy);font-size:8.5px;font-weight:700;padding:4px 11px;border-radius:2px;letter-spacing:.4px}
+/* SVG ICON UTILITY */
+.icon{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 
-/* ── BODY ─────────────────────────────────────────────────── */
-.body{display:flex;flex:1}
-.cl{width:178px;border-right:1px solid #e8e8e8;padding:10px 9px;display:flex;flex-direction:column;gap:8px}
-.cm{flex:1;border-right:1px solid #e8e8e8;padding:10px 9px;display:flex;flex-direction:column;gap:8px}
-.cr{width:178px;padding:10px 9px;display:flex;flex-direction:column;gap:8px}
-
-/* ── SECTION ──────────────────────────────────────────────── */
-.sec{display:flex;flex-direction:column;gap:5px}
-.sec-hd{display:flex;align-items:center;gap:5px;border-bottom:1.5px solid var(--navy);padding-bottom:3px}
-.sec-n{
-  width:14px;height:14px;background:var(--navy);color:var(--gold);
-  font-size:7px;font-weight:700;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-.sec-t{font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--navy)}
-
-/* ── TYPOGRAPHY ───────────────────────────────────────────── */
-.bt{font-size:8px;color:#2d2d2d;line-height:1.5;font-weight:400}
-.hl{color:var(--navy);font-weight:600}
-
-/* ── ATTACK ITEMS ─────────────────────────────────────────── */
-.atk{
-  display:flex;align-items:center;gap:5px;
-  background:#f7f9fc;border-left:3px solid var(--navy);
-  padding:3px 6px;border-radius:0 2px 2px 0;margin-bottom:2px;
-}
-.atk-code{font-size:7px;font-weight:700;color:var(--navy);font-family:'IBM Plex Mono',monospace;min-width:16px}
-.atk-name{font-size:7.5px;font-weight:600;color:#111;display:block}
+/* ATTACK CARDS */
+.atk-grid{display:flex;flex-direction:column;gap:2px}
+.atk-row{display:flex;align-items:center;gap:6px;padding:4px 7px;border-radius:3px;border-left:3px solid}
+.atk-name{font-size:7.5px;font-weight:700;display:block;color:#111}
 .atk-sub{font-size:6.5px;color:#666;display:block;line-height:1.2}
 
-/* ── EVIDENCE TABLE ───────────────────────────────────────── */
-.ev-t{width:100%;border-collapse:collapse;font-size:7px}
-.ev-t th{background:var(--navy);color:#fff;padding:3px 4px;font-size:6.5px;font-weight:600;letter-spacing:.4px}
-.ev-t td{padding:3px 4px;border-bottom:.5px solid #eee;line-height:1.3;color:#333;vertical-align:top}
-.ev-t tr:nth-child(even) td{background:#f8f9fc}
-.tn{font-size:6px;background:#dbeafe;color:#1e40af;padding:1px 3px;border-radius:2px;font-weight:600;white-space:nowrap}
-.ta{font-size:6px;background:#dcfce7;color:#166534;padding:1px 3px;border-radius:2px;font-weight:600;white-space:nowrap}
+/* GAP CARDS */
+.gap-card{border-radius:4px;padding:6px 8px;margin-bottom:3px;display:flex;align-items:flex-start;gap:8px}
+.gap-icon-wrap{flex-shrink:0;margin-top:1px}
+.gap-num{font-size:9px;font-weight:900;margin-bottom:1px}
+.gap-title{font-size:7.5px;font-weight:700;margin-bottom:1px}
+.gap-desc{font-size:7px;color:#555;line-height:1.4}
 
-/* ── GAP BOXES ────────────────────────────────────────────── */
-.gap{border-left:3px solid #dc2626;background:#fef2f2;padding:5px 7px;border-radius:0 3px 3px 0;margin-bottom:3px}
-.gap-t{font-size:7.5px;font-weight:700;color:#dc2626;margin-bottom:1px}
-.gap-b{font-size:7px;color:#374151;line-height:1.4}
+/* ARCHITECTURE */
+.arch-flow{display:flex;flex-direction:column;gap:3px}
+.arch-layer{border-radius:4px;padding:5px 8px;display:flex;align-items:center;gap:7px}
+.arch-badge{font-size:6.5px;font-weight:800;color:#fff;padding:2px 6px;border-radius:2px;flex-shrink:0;text-align:center;min-width:30px}
+.arch-arrow-wrap{text-align:center;line-height:1;color:#94a3b8}
+.arch-desc{font-size:7px;color:#374151;line-height:1.35}
+.arch-desc strong{color:#0b1a3b}
 
-/* ── COMP TABLE (MAIN) ────────────────────────────────────── */
-.ct{width:100%;border-collapse:collapse;font-size:7px}
-.ct thead th{
-  background:var(--navy);color:#fff;
-  padding:3.5px 3px;text-align:center;font-weight:600;font-size:6.5px;
-  letter-spacing:.2px;white-space:nowrap;
-}
-.ct thead th:nth-child(2),.ct thead th:nth-child(3){text-align:left}
-.ct td{padding:2.5px 3px;border-bottom:.5px solid rgba(0,0,0,0.05);vertical-align:middle;text-align:center;color:#222}
-.rc{font-size:6.5px;color:#444;line-height:1.3;text-align:left}
-.rc strong{color:var(--navy);font-size:7px}
-.mc{font-family:'IBM Plex Mono',monospace;font-size:6px;color:#333;text-align:left}
-.dc{font-size:6px;color:#555;font-style:italic}
+/* GENERATION TIMELINE */
+.gen-timeline{display:flex;gap:0;border-radius:6px;overflow:hidden;margin-bottom:2px}
+.gen-box{flex:1;padding:7px 5px;display:flex;flex-direction:column;align-items:center;gap:3px}
+.gen-label{font-size:6px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;text-align:center;line-height:1.2}
+.gen-years{font-size:5.5px;opacity:0.7;text-align:center}
+.gen-f1{font-size:12px;font-weight:900;text-align:center}
+.gen-f1-lbl{font-size:5.5px;opacity:0.7;text-align:center}
+.gen-tags{margin-top:3px;font-size:5.5px;text-align:center;line-height:1.5}
 
-/* Score colours */
-.sg{color:#166534;font-weight:700;font-size:7.5px}
-.sm{color:#92400e;font-weight:600;font-size:7px}
-.sl{color:#991b1b;font-weight:600;font-size:7px}
-.sp{color:#4c1d95;font-weight:800;font-size:8.5px}
-.na{color:#9ca3af;font-size:6.5px}
+/* FPR BARS */
+.fpr-vis{display:flex;align-items:center;gap:5px;margin-bottom:4px}
+.fpr-label{font-size:6.5px;color:#374151;min-width:65px;font-weight:500;line-height:1.2}
+.fpr-track{flex:1;background:#fee2e2;border-radius:2px;height:14px;position:relative;overflow:hidden}
+.fpr-fill{height:100%;border-radius:2px;display:flex;align-items:center;justify-content:flex-end;padding-right:4px}
+.fpr-val{font-size:6.5px;font-weight:800;color:#fff}
+.fpr-zero{font-size:6.5px;font-weight:800;color:#4c1d95;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 
-.cl-{font-size:6px;color:#6b7280}
-.cm-{font-size:6px;color:#d97706;font-weight:600}
-.ch-{font-size:6px;color:#dc2626;font-weight:600}
-.xf{font-size:6px;color:#166534;font-weight:700}
-.xn{font-size:6px;color:#9ca3af}
-.xp{font-size:6px;color:#4c1d95;font-weight:800}
+/* COMPARISON TABLE */
+.cmp-table{width:100%;border-radius:4px;overflow:hidden;font-size:6.5px}
+.cmp-hdr{display:grid;grid-template-columns:1fr 0.7fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;background:var(--navy);color:#fff;padding:4px 5px;font-size:6px;font-weight:700;letter-spacing:.3px;gap:2px}
+.cmp-gen-hdr{padding:3px 5px;font-size:6px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;display:flex;align-items:center;gap:4px}
+.gen-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.cmp-row{display:grid;grid-template-columns:1fr 0.7fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;padding:3px 5px;gap:2px;border-bottom:.5px solid rgba(0,0,0,0.05);align-items:center}
+.cr-ref{font-size:6px;color:#374151;font-weight:500}
+.cr-ref strong{color:var(--navy);font-weight:700;font-size:6.5px}
+.cr-m{font-family:monospace;font-size:5.5px;color:#555}
+.cr-v{font-size:7px;font-weight:700;text-align:center}
+.vg{color:#166534}.vm{color:#92400e}.vl{color:#991b1b}.vp{color:#4c1d95;font-size:8px;font-weight:900}
+.cost-l{font-size:5.5px;color:#6b7280;text-align:center}
+.cost-m{font-size:5.5px;color:#d97706;font-weight:700;text-align:center}
+.cost-h{font-size:5.5px;color:#dc2626;font-weight:700;text-align:center}
+.xai-f{font-size:6px;color:#166534;font-weight:800;text-align:center}
+.xai-n{font-size:6px;color:#d1d5db;text-align:center}
+.xai-p{font-size:6px;color:#4c1d95;font-weight:900;text-align:center}
 
-/* Gen row groups */
-.gh td{font-size:6.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:3px 3px 2px}
-.r1 td{background:var(--g1-bg)} .r1 .gh td{background:var(--g1-hd);color:var(--g1-txt)}
-.r2 td{background:var(--g2-bg)} .r2 .gh td{background:var(--g2-hd);color:var(--g2-txt)}
-.r3 td{background:var(--g3-bg)} .r3 .gh td{background:var(--g3-hd);color:var(--g3-txt)}
-.r4 td{background:var(--g4-bg)} .r4 .gh td{background:var(--g4-hd);color:var(--g4-txt)}
-.rs td{background:var(--gs-bg)} .rs .gh td{background:var(--gs-hd);color:var(--gs-txt)}
+/* RESULT CARDS */
+.results-big{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:4px}
+.rc{background:var(--navy);border-radius:5px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.rc-num{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--gold);line-height:1}
+.rc-lbl{font-size:6px;color:rgba(255,255,255,0.65);text-align:center;line-height:1.3;font-weight:300}
 
-.glbl{
-  writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);
-  font-size:6px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
-  color:#fff;padding:2px 1px;border-radius:1px;text-align:center;min-width:12px;
-}
-.gl1{background:#94a3b8}.gl2{background:#3b82f6}.gl3{background:#22c55e}.gl4{background:#f59e0b}.gls{background:#8b5cf6}
-.star-top td{border-top:2px solid #8b5cf6}
+/* EXPLAINABILITY BARS */
+.xai-row{display:flex;align-items:center;gap:4px;margin-bottom:3px}
+.xai-lbl{font-size:6.5px;color:#374151;min-width:62px}
+.xai-track{flex:1;background:#e2e8f0;border-radius:1px;height:8px;position:relative;overflow:hidden}
+.xai-fill{height:100%;border-radius:1px}
+.xai-tag{font-size:6px;font-weight:600;min-width:30px;text-align:right}
 
-/* ── F1 BARS ──────────────────────────────────────────────── */
-.bar-row{display:flex;align-items:center;gap:5px;margin-bottom:3.5px}
-.bar-lbl{font-size:7px;color:#374151;min-width:78px;font-weight:500;line-height:1.2}
-.bar-wrap{flex:1;background:#e8e8e8;border-radius:1px;height:11px;position:relative}
-.bar{height:100%;border-radius:1px;display:flex;align-items:center;justify-content:flex-end;padding-right:3px}
-.bar-v{font-size:6px;font-weight:700;color:#fff}
+/* PERSPECTIVES */
+.persp{display:flex;align-items:flex-start;gap:5px;margin-bottom:3px;padding:3px 5px;border-radius:3px;background:#f8fafc}
+.persp-num{width:14px;height:14px;background:var(--gold);color:var(--navy);font-size:7px;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.persp-text{font-size:7px;color:#374151;line-height:1.4}
 
-/* ── ARCH LAYERS ──────────────────────────────────────────── */
-.arch{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:3px;padding:7px 9px}
-.arch-t{font-size:7px;font-weight:700;color:#4c1d95;text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px}
-.lyr{display:flex;align-items:flex-start;gap:5px;padding:3.5px 5px;margin-bottom:2px;border-radius:2px}
-.lbdg{font-size:6.5px;font-weight:700;color:#fff;padding:2px 5px;border-radius:2px;white-space:nowrap;flex-shrink:0}
-.l1c{background:#1d4ed8}.l2c{background:#059669}.lcc{background:#7c3aed}.lxc{background:#b45309}
-.ldsc{font-size:7.5px;color:#374151;line-height:1.4}
-.ldsc strong{color:#111}
+/* CONCLUSION */
+.conclusion{background:var(--navy);border-radius:4px;padding:9px 11px;border-left:4px solid var(--gold)}
+.conclusion-text{font-size:7.5px;color:rgba(255,255,255,0.88);line-height:1.55;font-style:italic}
+.conclusion-text strong{color:var(--gold);font-style:normal}
 
-/* ── RESULT CARDS ─────────────────────────────────────────── */
-.rg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
-.rc2{
-  background:var(--navy);border-radius:3px;padding:6px;
-  display:flex;flex-direction:column;align-items:center;gap:1px;
-}
-.rc2-n{font-family:'Playfair Display',serif;font-size:16px;font-weight:900;color:var(--gold);line-height:1}
-.rc2-l{font-size:6px;color:rgba(255,255,255,0.65);text-align:center;font-weight:300;line-height:1.3}
+/* LEGEND */
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:3px;padding:4px 5px;background:rgba(255,255,255,0.6);border-radius:3px}
+.lc{display:flex;align-items:center;gap:3px}
+.ld{width:8px;height:8px;border-radius:2px}
+.lt{font-size:5.5px;color:#555}
 
-/* ── PERSPECTIVES ─────────────────────────────────────────── */
-.pi{display:flex;align-items:flex-start;gap:4px;margin-bottom:2.5px}
-.pd{width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:3px;flex-shrink:0}
-.pt{font-size:7.5px;color:#374151;line-height:1.4}
-
-/* ── CONCLUSION ───────────────────────────────────────────── */
-.con{background:var(--navy);border-radius:3px;padding:8px 10px}
-.con-t{font-size:7.5px;color:rgba(255,255,255,0.88);line-height:1.5;font-style:italic}
-.con-t strong{color:var(--gold);font-style:normal}
-
-/* ── LEGEND CHIPS ─────────────────────────────────────────── */
-.legend{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}
-.lchip{display:flex;align-items:center;gap:2px}
-.lchip-dot{width:9px;height:9px;border-radius:1px;flex-shrink:0}
-.lchip-txt{font-size:6.5px;color:#555}
-
-/* ── FOOTER ───────────────────────────────────────────────── */
-.ft{background:var(--navy);padding:7px 22px;display:flex;justify-content:space-between;align-items:center}
-.ft-l{font-size:7px;color:rgba(255,255,255,0.45)}
-.ft-c{font-size:7.5px;color:var(--gold);font-weight:600;letter-spacing:.4px}
+/* FOOTER */
+.ft{background:var(--navy);padding:6px 24px;display:flex;justify-content:space-between;align-items:center}
+.ft-l{font-size:7px;color:rgba(255,255,255,0.4)}
+.ft-c{font-size:7.5px;color:var(--gold);font-weight:600}
 .ft-r{font-size:6.5px;color:rgba(255,255,255,0.35)}
+
+@media print{@page{size:A1 portrait;margin:0}html,body{background:#fff;padding:0;display:block}.poster{box-shadow:none;width:100%}}
 </style>
 </head>
 <body>
@@ -211,216 +151,528 @@ html,body{width:100%;background:#ccc;display:flex;justify-content:center;padding
 
 <!-- HEADER -->
 <div class="hd">
-  <div class="hd-top">
+  <div class="hd-row1">
     <div class="badges">
-      <span class="badge badge-gold">ESTIN — Bejaia</span>
-      <span class="badge badge-out">LITAN Laboratory</span>
-      <span class="badge badge-dim">Master · Cybersecurity</span>
-      <span class="badge badge-dim">Université Paris Cité</span>
+      <span class="badge bg">ESTIN — Bejaia</span>
+      <span class="badge bw">LITAN Laboratory</span>
+      <span class="badge bd">Master · Cybersecurity</span>
+      <span class="badge bd">Université Paris Cité</span>
     </div>
-    <div class="hd-right">RN 75, Amizour 06300, Bejaia, Algeria</div>
+    <div class="hd-year">RN 75, Amizour 06300, Bejaia, Algeria · 2025–2026</div>
   </div>
-  <div>
-    <div class="hd-pretitle">Master Thesis Poster Presentation — Comparative Study</div>
-    <div class="hd-title">Design and Systematic Comparative Evaluation of a Multi-Modal Intelligent Intrusion Detection System for Second-Hand E-Commerce Marketplaces</div>
-    <div class="hd-case">— The SoukDZ Case Study —</div>
-  </div>
-  <div class="hd-bottom">
+  <div class="hd-pre">Master Thesis · Comparative Study of IDS Methods</div>
+  <div class="hd-title">Design &amp; Systematic Comparative Evaluation of a Multi-Modal Intelligent IDS for Second-Hand E-Commerce Marketplaces</div>
+  <div class="hd-case">— The SoukDZ Case Study —</div>
+  <div class="hd-bot">
     <div class="hd-people">
-      <div class="pip"><span class="pip-lbl">Student</span><span class="pip-val" style="font-family:'Playfair Display',serif;font-size:10.5px">Kiouaz Selssabila</span></div>
-      <div class="pip"><span class="pip-lbl">Local Supervisor</span><span class="pip-val">Mme Amara Karima — ESTIN / LITAN</span></div>
-      <div class="pip"><span class="pip-lbl">Co-Supervisor</span><span class="pip-val">Pr. Naït Abdesselam Farid — Univ. Paris Cité</span></div>
+      <div class="hp"><span class="hl">Student</span><span class="hv big">Kiouaz Selssabila</span></div>
+      <div class="hp"><span class="hl">Local Supervisor</span><span class="hv">Mme Amara Karima · ESTIN/LITAN</span></div>
+      <div class="hp"><span class="hl">Co-Supervisor</span><span class="hv">Pr. Naït Abdesselam Farid · Univ. Paris Cité</span></div>
     </div>
-    <div class="yr">2025 — 2026</div>
+    <div style="background:var(--gold);color:var(--navy);font-size:9px;font-weight:800;padding:5px 13px;border-radius:3px;letter-spacing:.4px">2025 — 2026</div>
   </div>
 </div>
 
 <!-- BODY -->
 <div class="body">
 
-  <!-- LEFT COLUMN -->
-  <div class="cl">
+<!-- ═══ LEFT COLUMN ═══ -->
+<div class="cl">
 
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">1</div><div class="sec-t">Abstract</div></div>
-      <p class="bt">Second-hand e-commerce marketplaces face a <span class="hl">hybrid threat landscape</span> in which every major attack simultaneously leaves evidence at both the network and application layers. Conventional IDS systems, operating at a single layer, are structurally insufficient.</p>
-      <p class="bt">This work presents a <span class="hl">systematic comparative study of 24 IDS methods across four generations</span> (1994–2026), evaluated on six performance dimensions. Three structural gaps are identified and addressed through a novel multi-modal cross-layer architecture validated with real Kali Linux attack campaigns.</p>
-    </div>
+  <div>
+    <div class="sh"><div class="sn">1</div><div class="st">Problématique</div><div class="divl"></div></div>
+    <p class="bt">Every attack on SoukDZ leaves evidence at <span class="hl2">two layers simultaneously</span>. Existing IDS address only one layer at a time.</p>
+  </div>
 
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">2</div><div class="sec-t">5 Attack Scenarios</div></div>
-      <div class="atk" style="border-color:#dc2626"><div class="atk-code" style="color:#dc2626">S1</div><div><span class="atk-name">Brute Force</span><span class="atk-sub">Hydra v9.5 · T1110.001</span></div></div>
-      <div class="atk" style="border-color:#d97706"><div class="atk-code" style="color:#d97706">S2</div><div><span class="atk-name">Credential Stuffing</span><span class="atk-sub">Distributed IPs · T1110.004</span></div></div>
-      <div class="atk" style="border-color:#7c3aed"><div class="atk-code" style="color:#7c3aed">S3</div><div><span class="atk-name">Reconnaissance</span><span class="atk-sub">Nikto v2.5.0 · T1595.002</span></div></div>
-      <div class="atk" style="border-color:#0891b2"><div class="atk-code" style="color:#0891b2">S4</div><div><span class="atk-name">Catalog Scraping</span><span class="atk-sub">Python scripts · T1020</span></div></div>
-      <div class="atk" style="border-color:#059669"><div class="atk-code" style="color:#059669">S5</div><div><span class="atk-name">Fake Accounts</span><span class="atk-sub">Mass registration · T1136</span></div></div>
-    </div>
+  <!-- 5 Attacks with SVG icons -->
+  <div>
+    <div class="sh"><div class="sn">2</div><div class="st">5 Attack Scenarios</div><div class="divl"></div></div>
+    <div class="atk-grid">
 
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">3</div><div class="sec-t">Dual-Layer Evidence</div></div>
-      <table class="ev-t">
-        <tr><th style="text-align:left">Attack</th><th>Network Layer</th><th>App Layer</th></tr>
-        <tr><td>Brute Force</td><td><span class="tn">req_rate↑ · Hydra UA</span></td><td><span class="ta">failed_logins↑</span></td></tr>
-        <tr><td>Stuffing</td><td><span class="tn">Distributed IPs</span></td><td><span class="ta">logins across wins</span></td></tr>
-        <tr><td>Recon</td><td><span class="tn">Port variety</span></td><td><span class="ta">scan_score↑ (404s)</span></td></tr>
-        <tr><td>Scraping</td><td><span class="tn">High rate · short pkts</span></td><td><span class="ta">listing_reqs↑</span></td></tr>
-        <tr><td>Fake Accts</td><td><span class="tn">Form POSTs</span></td><td><span class="ta">new_accounts↑</span></td></tr>
-      </table>
-      <p class="bt" style="margin-top:3px;font-style:italic;color:#666;font-size:7px">→ A single-layer IDS is structurally insufficient. Cross-layer correlation is essential.</p>
-    </div>
-
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">4</div><div class="sec-t">Three Research Gaps</div></div>
-      <div class="gap">
-        <div class="gap-t">Gap 1 — Network-Application Divide</div>
-        <div class="gap-b">All 24 reviewed systems operate at a single layer. Cross-layer behavioral correlation is entirely absent from the published literature.</div>
+      <div class="atk-row" style="background:#fef2f2;border-color:#dc2626">
+        <div class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div><span class="atk-name">S1 · Brute Force</span><span class="atk-sub">Hydra v9.5 · T1110.001</span></div>
       </div>
-      <div class="gap" style="border-color:#d97706;background:#fffbeb">
-        <div class="gap-t" style="color:#d97706">Gap 2 — Lack of Domain Specificity</div>
-        <div class="gap-b">Generic benchmarks do not capture marketplace behavioral patterns (rating manipulation, catalog scraping, coordinated fake accounts).</div>
+
+      <div class="atk-row" style="background:#fffbeb;border-color:#d97706">
+        <div class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <div><span class="atk-name">S2 · Credential Stuffing</span><span class="atk-sub">Breach lists · T1110.004</span></div>
       </div>
-      <div class="gap" style="border-color:#7c3aed;background:#f5f3ff">
-        <div class="gap-t" style="color:#7c3aed">Gap 3 — Opaque Model Outputs</div>
-        <div class="gap-b">Only 2 of 24 reviewed methods provide full per-alert explainability. Analysts cannot act reliably on unexplained probability scores.</div>
+
+      <div class="atk-row" style="background:#f5f3ff;border-color:#7c3aed">
+        <div class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <div><span class="atk-name">S3 · Reconnaissance</span><span class="atk-sub">Nikto v2.5.0 · T1595.002</span></div>
+      </div>
+
+      <div class="atk-row" style="background:#eff6ff;border-color:#3b82f6">
+        <div class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <div><span class="atk-name">S4 · Catalog Scraping</span><span class="atk-sub">Python scripts · T1020</span></div>
+      </div>
+
+      <div class="atk-row" style="background:#f0fdf4;border-color:#22c55e">
+        <div class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div><span class="atk-name">S5 · Fake Accounts</span><span class="atk-sub">Mass registration · T1136</span></div>
       </div>
     </div>
+  </div>
 
-  </div><!-- /left -->
+  <!-- Dual Layer -->
+  <div>
+    <div class="sh"><div class="sn">3</div><div class="st">Dual-Layer Evidence</div><div class="divl"></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:6.5px">
+      <div style="background:#dbeafe;border-radius:3px;padding:5px 6px">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:3px">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1e40af" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span style="font-weight:800;color:#1e40af;font-size:7px">Network Layer</span>
+        </div>
+        <div style="color:#1e40af;line-height:1.7">req_rate &#8593;<br>Suspicious UA<br>Port variety<br>Packet bursts<br>Payload size &#8595;</div>
+      </div>
+      <div style="background:#dcfce7;border-radius:3px;padding:5px 6px">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:3px">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <span style="font-weight:800;color:#166534;font-size:7px">App Layer</span>
+        </div>
+        <div style="color:#166534;line-height:1.7">failed_logins &#8593;<br>success_ratio &#8595;<br>scan_score &#8593;<br>listing_reqs &#8593;<br>new_accounts &#8593;</div>
+      </div>
+    </div>
+    <p style="font-size:6.5px;color:#666;font-style:italic;margin-top:4px;text-align:center;padding:3px 5px;background:#f8fafc;border-radius:2px;border-left:2px solid #94a3b8">A single-layer IDS is structurally blind to half the evidence</p>
+  </div>
 
-  <!-- MIDDLE COLUMN -->
-  <div class="cm">
+  <!-- 3 Research Gaps with SVG icons -->
+  <div>
+    <div class="sh"><div class="sn">4</div><div class="st">3 Research Gaps</div><div class="divl"></div></div>
 
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">5</div><div class="sec-t">Systematic Comparative Study — 24 Published Methods Across Four Generations (1994–2026)</div></div>
-
-      <table class="ct">
-        <thead>
-          <tr>
-            <th style="width:12px"></th>
-            <th style="text-align:left;min-width:72px">Reference · Year</th>
-            <th style="text-align:left;min-width:82px">Method</th>
-            <th>Dataset</th>
-            <th>F1</th>
-            <th>AUC</th>
-            <th>DR</th>
-            <th>FPR</th>
-            <th>Cost</th>
-            <th>XAI</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- GEN 1 -->
-          <tr class="r1 gh"><td><div class="glbl gl1">G1</div></td><td colspan="9" style="padding-left:2px">Classical Statistical Methods (1994 – 2009) · Mean F1 ≈ 0.72 · FPR &gt; 15%</td></tr>
-          <tr class="r1"><td></td><td class="rc"><strong>Denning</strong> 1987</td><td class="mc">IDES · Expert rules</td><td class="dc">Custom</td><td class="na">n/a</td><td class="na">n/a</td><td class="sl">0.72</td><td class="sl">&gt;0.15</td><td class="cl-">Low</td><td class="xn">Partial</td></tr>
-          <tr class="r1"><td></td><td class="rc"><strong>KDD Cup</strong> 1999</td><td class="mc">C4.5 Decision Tree</td><td class="dc">KDD99</td><td class="sm">0.87</td><td class="na">n/a</td><td class="sm">0.92</td><td class="sm">0.08</td><td class="cl-">Low</td><td class="xn">Partial</td></tr>
-          <tr class="r1"><td></td><td class="rc"><strong>Tavallaee</strong> 2009</td><td class="mc">RF Baseline · dedup.</td><td class="dc">NSL-KDD</td><td class="sm">0.78</td><td class="na">n/a</td><td class="sm">0.85</td><td class="sm">0.12</td><td class="cl-">Low</td><td class="xn">None</td></tr>
-
-          <!-- GEN 2 -->
-          <tr class="r2 gh"><td><div class="glbl gl2">G2</div></td><td colspan="9">ML Ensemble Methods (2009 – 2018) · Mean F1 ≈ 0.93 · FPR 3–8% · Single-layer · No XAI</td></tr>
-          <tr class="r2"><td></td><td class="rc"><strong>Boro &amp; Neha</strong> 2012</td><td class="mc">Random Forest</td><td class="dc">NSL-KDD</td><td class="sg">0.94</td><td class="sg">0.97</td><td class="sg">0.96</td><td class="sg">0.04</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-          <tr class="r2"><td></td><td class="rc"><strong>Aburomman</strong> 2016</td><td class="mc">SVM Ensemble</td><td class="dc">NSL-KDD</td><td class="sg">0.92</td><td class="sg">0.95</td><td class="sg">0.93</td><td class="sm">0.06</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-          <tr class="r2"><td></td><td class="rc"><strong>Sharafaldin</strong> 2018</td><td class="mc">RF · DDoS category</td><td class="dc">CICIDS2017</td><td class="sg">0.97</td><td class="sg">0.99</td><td class="sg">0.98</td><td class="sg">0.01</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-          <tr class="r2"><td></td><td class="rc"><strong>Sharafaldin</strong> 2018</td><td class="mc">RF · Infiltration</td><td class="dc">CICIDS2017</td><td class="sl">0.68</td><td class="sm">0.81</td><td class="sl">0.70</td><td class="sm">0.08</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-          <tr class="r2"><td></td><td class="rc"><strong>Yerlan et al.</strong> 2018</td><td class="mc">XGBoost</td><td class="dc">NSL-KDD</td><td class="sg">0.96</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.03</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-          <tr class="r2"><td></td><td class="rc"><strong>Farnaaz</strong> 2016</td><td class="mc">RF · multi-class</td><td class="dc">NSL-KDD</td><td class="sg">0.95</td><td class="sg">0.97</td><td class="sg">0.96</td><td class="sg">0.04</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-
-          <!-- GEN 3 -->
-          <tr class="r3 gh"><td><div class="glbl gl3">G3</div></td><td colspan="9">Deep Learning Architectures (2018 – 2022) · Mean F1 ≈ 0.95 · High GPU cost · Opaque outputs</td></tr>
-          <tr class="r3"><td></td><td class="rc"><strong>Kim et al.</strong> 2016</td><td class="mc">LSTM · temporal seq.</td><td class="dc">NSL-KDD</td><td class="sg">0.95</td><td class="sg">0.97</td><td class="sg">0.95</td><td class="sg">0.04</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r3"><td></td><td class="rc"><strong>Yin et al.</strong> 2017</td><td class="mc">RNN · multi-class</td><td class="dc">NSL-KDD</td><td class="sg">0.95</td><td class="sg">0.97</td><td class="sg">0.96</td><td class="sg">0.04</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r3"><td></td><td class="rc"><strong>Wu et al.</strong> 2021</td><td class="mc">Transformer · attn.</td><td class="dc">CICIDS2017</td><td class="sg">0.97</td><td class="sg">0.99</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r3"><td></td><td class="rc"><strong>Andresini</strong> 2020</td><td class="mc">CNN + LSTM</td><td class="dc">CICIDS2017</td><td class="sg">0.96</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r3"><td></td><td class="rc"><strong>Vinayakumar</strong> 2019</td><td class="mc">Deep MLP</td><td class="dc">NSL-KDD+CIC</td><td class="sg">0.97</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
-
-          <!-- GEN 4 -->
-          <tr class="r4 gh"><td><div class="glbl gl4">G4</div></td><td colspan="9">Hybrid &amp; Explainable Systems (2022 – 2026) · Mean F1 ≈ 0.97 · Still single-layer</td></tr>
-          <tr class="r4"><td></td><td class="rc"><strong>Faker &amp; Dogru</strong> 2023</td><td class="mc">RF + Autoencoder</td><td class="dc">CICIDS2018</td><td class="sg">0.98</td><td class="sg">0.99</td><td class="sg">0.99</td><td class="sg">0.01</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r4"><td></td><td class="rc"><strong>Das et al.</strong> 2022</td><td class="mc">GAN + RF</td><td class="dc">NSL-KDD</td><td class="sg">0.97</td><td class="sg">0.98</td><td class="sg">0.98</td><td class="sg">0.02</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r4"><td></td><td class="rc"><strong>Krishnan</strong> 2023</td><td class="mc">XGBoost + SHAP</td><td class="dc">CICIDS2017</td><td class="sg">0.97</td><td class="sg">0.98</td><td class="sg">0.97</td><td class="sg">0.02</td><td class="cm-">Med</td><td class="xf">Full ✓</td></tr>
-          <tr class="r4"><td></td><td class="rc"><strong>Ngo et al.</strong> 2023</td><td class="mc">CNN + RF Ensemble</td><td class="dc">UNSW-NB15</td><td class="sg">0.96</td><td class="sg">0.97</td><td class="sg">0.97</td><td class="sg">0.03</td><td class="ch-">High</td><td class="xn">None</td></tr>
-          <tr class="r4"><td></td><td class="rc"><strong>Bahnsen</strong> 2016</td><td class="mc">RF + temporal (e-comm)</td><td class="dc">Proprietary</td><td class="sg">0.94</td><td class="sg">0.96</td><td class="sg">0.95</td><td class="sg">0.04</td><td class="cm-">Med</td><td class="xn">None</td></tr>
-          <tr class="r4"><td></td><td class="rc"><strong>Rahman</strong> 2024</td><td class="mc">Best ensemble · survey</td><td class="dc">Multi-dataset</td><td class="sg">0.98</td><td class="sg">0.99</td><td class="sg">0.99</td><td class="sg">0.01</td><td class="ch-">High</td><td class="xn">Partial</td></tr>
-
-          <!-- SOUKDZ -->
-          <tr class="rs gh star-top"><td><div class="glbl gls">OUR</div></td><td colspan="9" style="color:#4c1d95;font-size:7px">SoukDZ Multi-Modal IDS — This Work (2026) · Cross-layer · Domain-specific · Full XAI</td></tr>
-          <tr class="rs star-top"><td></td><td class="rc"><strong>SoukDZ</strong> Layer 1</td><td class="mc">RF · SMOTE · SHAP</td><td class="dc">CICIDS2017</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">0.000</td><td class="cm-">Med</td><td class="xp">Full ★</td></tr>
-          <tr class="rs"><td></td><td class="rc"><strong>SoukDZ</strong> Layer 2</td><td class="mc">RF · SMOTE · SHAP</td><td class="dc">SoukDZ Logs</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">1.000</td><td class="sp">0.000</td><td class="cl-">Low</td><td class="xp">Full ★</td></tr>
-        </tbody>
-      </table>
-
-      <div class="legend">
-        <div class="lchip"><div class="lchip-dot" style="background:#94a3b8"></div><span class="lchip-txt">Gen 1 — Classical</span></div>
-        <div class="lchip"><div class="lchip-dot" style="background:#3b82f6"></div><span class="lchip-txt">Gen 2 — ML Ensembles</span></div>
-        <div class="lchip"><div class="lchip-dot" style="background:#22c55e"></div><span class="lchip-txt">Gen 3 — Deep Learning</span></div>
-        <div class="lchip"><div class="lchip-dot" style="background:#f59e0b"></div><span class="lchip-txt">Gen 4 — Hybrid</span></div>
-        <div class="lchip"><div class="lchip-dot" style="background:#8b5cf6"></div><span class="lchip-txt">SoukDZ — This Work</span></div>
-        <span class="lchip-txt" style="margin-left:4px">· DR = Detection Rate &nbsp;|&nbsp; FPR = False Positive Rate &nbsp;|&nbsp; XAI = Explainability</span>
+    <div class="gap-card" style="background:#fef2f2">
+      <div class="gap-icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+          <line x1="5" y1="5" x2="19" y2="5" stroke-dasharray="2 2"/>
+        </svg>
+      </div>
+      <div>
+        <div class="gap-num" style="color:#dc2626">Gap 1</div>
+        <div class="gap-title" style="color:#dc2626">Network-App Divide</div>
+        <div class="gap-desc">Zero published IDS correlates both layers for marketplace threats.</div>
       </div>
     </div>
 
-  </div><!-- /mid -->
-
-  <!-- RIGHT COLUMN -->
-  <div class="cr">
-
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">6</div><div class="sec-t">F1-Score Evolution</div></div>
-      <div class="bar-row"><div class="bar-lbl">Gen 1 · Classical</div><div class="bar-wrap"><div class="bar" style="width:72%;background:#94a3b8"><span class="bar-v">0.72</span></div></div></div>
-      <div class="bar-row"><div class="bar-lbl">Gen 2 · ML Ensembles</div><div class="bar-wrap"><div class="bar" style="width:93%;background:#3b82f6"><span class="bar-v">0.93</span></div></div></div>
-      <div class="bar-row"><div class="bar-lbl">Gen 3 · Deep Learning</div><div class="bar-wrap"><div class="bar" style="width:95%;background:#22c55e"><span class="bar-v">0.95</span></div></div></div>
-      <div class="bar-row"><div class="bar-lbl">Gen 4 · Hybrid</div><div class="bar-wrap"><div class="bar" style="width:97%;background:#f59e0b"><span class="bar-v">0.97</span></div></div></div>
-      <div class="bar-row"><div class="bar-lbl" style="font-weight:700;color:#4c1d95">SoukDZ · This Work</div><div class="bar-wrap"><div class="bar" style="width:100%;background:#8b5cf6"><span class="bar-v">1.000</span></div></div></div>
-      <p class="bt" style="font-size:7px;font-style:italic;color:#555;margin-top:2px">F1 improved from 0.72 (1994) to 0.97 (2026). <strong style="color:#4c1d95">SoukDZ achieves the theoretical maximum on both layers simultaneously.</strong> FPR fell from &gt;15% (Gen 1) to 0% (SoukDZ).</p>
-    </div>
-
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">7</div><div class="sec-t">Proposed Architecture</div></div>
-      <div class="arch">
-        <div class="arch-t">SoukDZ Multi-Modal IDS</div>
-        <div class="lyr" style="background:#eff6ff"><span class="lbdg l1c">L1</span><div class="ldsc"><strong>Network</strong> · Scapy → 7 features/60s → RF on CICIDS2017 → S<sub>L1</sub></div></div>
-        <div class="lyr" style="background:#f0fdf4"><span class="lbdg l2c">L2</span><div class="ldsc"><strong>Behavioral</strong> · Apache logs → 8 features/5min → RF+SMOTE → S<sub>L2</sub></div></div>
-        <div class="lyr" style="background:#f5f3ff"><span class="lbdg lcc">Corr</span><div class="ldsc"><strong>Correlation</strong> · S<sub>final</sub> = 0.6·S<sub>L2</sub> + 0.4·S<sub>L1</sub> → 4-tier alerts</div></div>
-        <div class="lyr" style="background:#fffbeb"><span class="lbdg lxc">XAI</span><div class="ldsc"><strong>Explainability</strong> · SHAP TreeSHAP → per-alert attribution dashboard</div></div>
+    <div class="gap-card" style="background:#fffbeb">
+      <div class="gap-icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <div>
+        <div class="gap-num" style="color:#d97706">Gap 2</div>
+        <div class="gap-title" style="color:#d97706">No Domain Specificity</div>
+        <div class="gap-desc">Generic benchmarks miss marketplace behavioral patterns entirely.</div>
       </div>
     </div>
 
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">8</div><div class="sec-t">Key Experimental Results</div></div>
-      <div class="rg">
-        <div class="rc2"><div class="rc2-n">1.000</div><div class="rc2-l">F1 &amp; AUC both layers</div></div>
-        <div class="rc2"><div class="rc2-n">100%</div><div class="rc2-l">Detection rate · 5 Kali scenarios</div></div>
-        <div class="rc2"><div class="rc2-n" style="font-size:13px">0 FP</div><div class="rc2-l">Against 4,861 legit entries</div></div>
-        <div class="rc2"><div class="rc2-n" style="font-size:13px">10s</div><div class="rc2-l">Detection delay · all scenarios</div></div>
+    <div class="gap-card" style="background:#f5f3ff">
+      <div class="gap-icon-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+          <line x1="3" y1="3" x2="21" y2="21" stroke="#7c3aed" stroke-opacity="0.4"/>
+        </svg>
       </div>
-      <div style="margin-top:4px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:2px;padding:4px 7px">
-        <p style="font-size:7px;color:#14532d;line-height:1.5"><strong>Layer 1</strong> CICIDS2017: n=70,133 · Brute Force, DDoS, PortScan<br><strong>Layer 2</strong> SoukDZ: n=71 windows · RF, SVM, KNN, DT all F1=1.000<br><strong>Campaign</strong> 24 May 2026 · Hydra v9.5, Nikto v2.5.0, Python</p>
+      <div>
+        <div class="gap-num" style="color:#7c3aed">Gap 3</div>
+        <div class="gap-title" style="color:#7c3aed">Opaque Outputs</div>
+        <div class="gap-desc">Only 2 of 24 methods provide full per-alert explainability.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Architecture -->
+  <div>
+    <div class="sh"><div class="sn">5</div><div class="st">SoukDZ IDS Architecture</div><div class="divl"></div></div>
+    <div class="arch-flow">
+      <div class="arch-layer" style="background:#eff6ff">
+        <span class="arch-badge" style="background:#1d4ed8">L1</span>
+        <div class="arch-desc"><strong>Network</strong> · Scapy → 7 features / 60s → RF on CICIDS2017 → S<sub>L1</sub></div>
+      </div>
+      <div class="arch-arrow-wrap">
+        <svg width="12" height="10" viewBox="0 0 12 10"><path d="M6 0 L6 6 M3 4 L6 8 L9 4" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="arch-layer" style="background:#f0fdf4">
+        <span class="arch-badge" style="background:#059669">L2</span>
+        <div class="arch-desc"><strong>Behavioral</strong> · Apache logs → 8 features / 5min → RF + SMOTE → S<sub>L2</sub></div>
+      </div>
+      <div class="arch-arrow-wrap">
+        <svg width="12" height="10" viewBox="0 0 12 10"><path d="M6 0 L6 6 M3 4 L6 8 L9 4" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="arch-layer" style="background:#f5f3ff">
+        <span class="arch-badge" style="background:#7c3aed">Corr</span>
+        <div class="arch-desc"><strong>Correlator</strong> · S<sub>final</sub> = 0.6 · S<sub>L2</sub> + 0.4 · S<sub>L1</sub> → 4-tier alerts</div>
+      </div>
+      <div class="arch-arrow-wrap">
+        <svg width="12" height="10" viewBox="0 0 12 10"><path d="M6 0 L6 6 M3 4 L6 8 L9 4" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="arch-layer" style="background:#fffbeb">
+        <span class="arch-badge" style="background:#b45309">XAI</span>
+        <div class="arch-desc"><strong>SHAP</strong> · Per-alert feature attribution → Streamlit dashboard</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /left -->
+
+<!-- ═══ MIDDLE COLUMN ═══ -->
+<div class="cm">
+
+  <!-- Generation Timeline with SVG icons -->
+  <div>
+    <div class="sh"><div class="sn">6</div><div class="st">Four Generations of IDS Research (1994 – 2026) — Systematic Evolution</div><div class="divl"></div></div>
+    <div class="gen-timeline">
+
+      <div class="gen-box" style="background:#f1f5f9;border-right:2px solid #e2e8f0">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round">
+          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+        </svg>
+        <div class="gen-label" style="color:#475569">Gen 1<br>Classical</div>
+        <div class="gen-years" style="color:#64748b">1994–2009</div>
+        <div class="gen-f1" style="color:#94a3b8">0.72</div>
+        <div class="gen-f1-lbl" style="color:#94a3b8">Mean F1</div>
+        <div class="gen-tags" style="color:#64748b">Statistical<br>Threshold-based<br>FPR &gt;15%</div>
+      </div>
+
+      <div class="gen-box" style="background:#eff6ff;border-right:2px solid #e2e8f0">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <div class="gen-label" style="color:#1e40af">Gen 2<br>ML Ensembles</div>
+        <div class="gen-years" style="color:#3b82f6">2009–2018</div>
+        <div class="gen-f1" style="color:#3b82f6">0.93</div>
+        <div class="gen-f1-lbl" style="color:#3b82f6">Mean F1</div>
+        <div class="gen-tags" style="color:#1e40af">RF · XGBoost<br>SVM<br>Single-layer</div>
+      </div>
+
+      <div class="gen-box" style="background:#f0fdf4;border-right:2px solid #e2e8f0">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>
+          <path d="M12 7v4l-4 4"/><path d="M12 11l4 4"/>
+          <line x1="12" y1="7" x2="12" y2="11"/>
+        </svg>
+        <div class="gen-label" style="color:#14532d">Gen 3<br>Deep Learning</div>
+        <div class="gen-years" style="color:#22c55e">2018–2022</div>
+        <div class="gen-f1" style="color:#22c55e">0.95</div>
+        <div class="gen-f1-lbl" style="color:#22c55e">Mean F1</div>
+        <div class="gen-tags" style="color:#14532d">LSTM · CNN<br>Transformer<br>GPU required</div>
+      </div>
+
+      <div class="gen-box" style="background:#fffbeb;border-right:2px solid #e2e8f0">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round">
+          <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+          <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+        </svg>
+        <div class="gen-label" style="color:#92400e">Gen 4<br>Hybrid</div>
+        <div class="gen-years" style="color:#f59e0b">2022–2026</div>
+        <div class="gen-f1" style="color:#f59e0b">0.97</div>
+        <div class="gen-f1-lbl" style="color:#f59e0b">Mean F1</div>
+        <div class="gen-tags" style="color:#92400e">RF+AE · GAN<br>XGBoost+SHAP<br>Single-layer</div>
+      </div>
+
+      <div class="gen-box" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <div class="gen-label" style="color:#4c1d95">SoukDZ<br>This Work</div>
+        <div class="gen-years" style="color:#8b5cf6">2026</div>
+        <div class="gen-f1" style="color:#8b5cf6;font-size:15px">1.000</div>
+        <div class="gen-f1-lbl" style="color:#8b5cf6">F1 — Both layers</div>
+        <div class="gen-tags" style="color:#4c1d95">Cross-layer<br>Domain-specific<br>FPR = 0.000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F1 Bar Chart + FPR Chart -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+
+    <!-- F1 Chart -->
+    <div>
+      <div class="sh"><div class="sn">7</div><div class="st">F1-Score Evolution</div><div class="divl"></div></div>
+      <div style="position:relative;padding-left:26px">
+        <div style="position:absolute;left:0;top:0;bottom:18px;width:24px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;padding-right:3px">
+          <span style="font-size:5.5px;color:#94a3b8">1.00</span>
+          <span style="font-size:5.5px;color:#94a3b8">0.90</span>
+          <span style="font-size:5.5px;color:#94a3b8">0.80</span>
+          <span style="font-size:5.5px;color:#94a3b8">0.70</span>
+          <span style="font-size:5.5px;color:#94a3b8">0.60</span>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:4px;height:90px;border-left:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;padding:0 4px;position:relative">
+          <div style="position:absolute;left:0;right:0;top:0;pointer-events:none">
+            <div style="border-top:1px dashed #f1f5f9;margin-bottom:22px"></div>
+            <div style="border-top:1px dashed #f1f5f9;margin-bottom:22px"></div>
+            <div style="border-top:1px dashed #f1f5f9;margin-bottom:22px"></div>
+            <div style="border-top:1px dashed #f1f5f9"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div style="font-size:7px;font-weight:800;color:#94a3b8">0.72</div>
+            <div style="width:100%;height:27px;background:#94a3b8;border-radius:2px 2px 0 0"></div>
+            <div style="font-size:5.5px;color:#475569;font-weight:600;text-align:center;line-height:1.2">Gen 1</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div style="font-size:7px;font-weight:800;color:#3b82f6">0.93</div>
+            <div style="width:100%;height:57px;background:#3b82f6;border-radius:2px 2px 0 0"></div>
+            <div style="font-size:5.5px;color:#1e40af;font-weight:600;text-align:center;line-height:1.2">Gen 2</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div style="font-size:7px;font-weight:800;color:#22c55e">0.95</div>
+            <div style="width:100%;height:63px;background:#22c55e;border-radius:2px 2px 0 0"></div>
+            <div style="font-size:5.5px;color:#14532d;font-weight:600;text-align:center;line-height:1.2">Gen 3</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div style="font-size:7px;font-weight:800;color:#f59e0b">0.97</div>
+            <div style="width:100%;height:69px;background:#f59e0b;border-radius:2px 2px 0 0"></div>
+            <div style="font-size:5.5px;color:#92400e;font-weight:600;text-align:center;line-height:1.2">Gen 4</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px">
+            <div style="font-size:7.5px;font-weight:900;color:#8b5cf6">1.000</div>
+            <div style="width:100%;height:82px;background:linear-gradient(180deg,#8b5cf6,#6d28d9);border-radius:2px 2px 0 0;box-shadow:0 0 8px rgba(139,92,246,0.4)"></div>
+            <div style="font-size:5.5px;color:#4c1d95;font-weight:800;text-align:center;line-height:1.2">SoukDZ</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">9</div><div class="sec-t">Research Perspectives</div></div>
-      <div class="pi"><div class="pd"></div><div class="pt">Production data retraining on real SoukDZ logs (60 days post-deployment)</div></div>
-      <div class="pi"><div class="pd"></div><div class="pt">Streaming log-tailing to reduce detection latency below 1 second</div></div>
-      <div class="pi"><div class="pd"></div><div class="pt">Federated learning across multiple e-commerce platforms</div></div>
-      <div class="pi"><div class="pd"></div><div class="pt">Graph Neural Networks for fraud ring detection</div></div>
-      <div class="pi"><div class="pd"></div><div class="pt">Adversarial robustness against threshold-aware evasion</div></div>
-    </div>
-
-    <div class="sec">
-      <div class="sec-hd"><div class="sec-n">10</div><div class="sec-t">Conclusion</div></div>
-      <div class="con">
-        <div class="con-t">This is the <strong>first IDS system simultaneously addressing cross-layer correlation, marketplace domain specificity, and full SHAP explainability</strong>. The comparative study confirms that F1 performance has plateaued at 0.97–0.98 in Generation 4. The remaining frontier is architectural: <strong>no published system fuses network and application behavioral signals for a marketplace threat model</strong>. SoukDZ fills this gap with a deployable, explainable, production-ready architecture.</div>
+    <!-- FPR Chart -->
+    <div>
+      <div class="sh"><div class="sn">8</div><div class="st">FPR Reduction</div><div class="divl"></div></div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+        <div class="fpr-vis">
+          <div class="fpr-label">Gen 1 · Classical</div>
+          <div class="fpr-track">
+            <div class="fpr-fill" style="width:100%;background:#dc2626"><span class="fpr-val">&gt;20%</span></div>
+          </div>
+        </div>
+        <div class="fpr-vis">
+          <div class="fpr-label">Gen 2 · ML</div>
+          <div class="fpr-track">
+            <div class="fpr-fill" style="width:25%;background:#f59e0b"><span class="fpr-val">5%</span></div>
+          </div>
+        </div>
+        <div class="fpr-vis">
+          <div class="fpr-label">Gen 3 · Deep L.</div>
+          <div class="fpr-track">
+            <div class="fpr-fill" style="width:20%;background:#22c55e"><span class="fpr-val">4%</span></div>
+          </div>
+        </div>
+        <div class="fpr-vis">
+          <div class="fpr-label">Gen 4 · Hybrid</div>
+          <div class="fpr-track">
+            <div class="fpr-fill" style="width:10%;background:#3b82f6"><span class="fpr-val">2%</span></div>
+          </div>
+        </div>
+        <div class="fpr-vis">
+          <div class="fpr-label" style="font-weight:700;color:#4c1d95">SoukDZ IDS</div>
+          <div class="fpr-track" style="background:#ede9fe;border:1.5px solid #8b5cf6">
+            <div class="fpr-zero">0.000 — Confirmed</div>
+          </div>
+        </div>
+        <div style="font-size:6px;color:#94a3b8;font-style:italic;text-align:center">Against 4,861 legitimate concurrent entries</div>
       </div>
     </div>
+  </div>
 
-  </div><!-- /right -->
+  <!-- Comparison Table -->
+  <div>
+    <div class="sh"><div class="sn">9</div><div class="st">Comprehensive Comparison — 24 Published Methods · 4 Generations · 6 Dimensions</div><div class="divl"></div></div>
+    <div class="cmp-table">
+      <div class="cmp-hdr">
+        <span>Reference · Year</span><span>Method</span><span>F1</span><span>AUC</span><span>DR</span><span>FPR</span><span>Cost</span><span>XAI</span>
+      </div>
+      <div class="cmp-gen-hdr" style="background:var(--bg1)"><div class="gen-dot" style="background:var(--g1)"></div><span style="color:#475569">Generation 1 — Classical Statistical (1994–2009) · Mean F1 ≈ 0.72 · FPR &gt;15%</span></div>
+      <div class="cmp-row" style="background:var(--bg1)"><div class="cr-ref"><strong>Denning</strong> 1987</div><div class="cr-m">IDES · Expert rules</div><div class="cr-v" style="color:#94a3b8">n/a</div><div class="cr-v" style="color:#94a3b8">n/a</div><div class="cr-v vm">0.72</div><div class="cr-v vl">&gt;0.15</div><div class="cost-l">Low</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg1)"><div class="cr-ref"><strong>KDD Cup</strong> 1999</div><div class="cr-m">C4.5 Decision Tree</div><div class="cr-v vm">0.87</div><div class="cr-v" style="color:#94a3b8">n/a</div><div class="cr-v vg">0.92</div><div class="cr-v vm">0.08</div><div class="cost-l">Low</div><div class="xai-p">Part.</div></div>
+      <div class="cmp-row" style="background:var(--bg1)"><div class="cr-ref"><strong>Tavallaee</strong> 2009</div><div class="cr-m">RF Baseline</div><div class="cr-v vm">0.78</div><div class="cr-v" style="color:#94a3b8">n/a</div><div class="cr-v vm">0.85</div><div class="cr-v vm">0.12</div><div class="cost-l">Low</div><div class="xai-n">—</div></div>
+      <div class="cmp-gen-hdr" style="background:var(--bg2)"><div class="gen-dot" style="background:var(--g2)"></div><span style="color:#1e40af">Generation 2 — ML Ensembles (2009–2018) · Mean F1 ≈ 0.93 · Single-layer · No XAI</span></div>
+      <div class="cmp-row" style="background:var(--bg2)"><div class="cr-ref"><strong>Boro &amp; Neha</strong> 2012</div><div class="cr-m">Random Forest</div><div class="cr-v vg">0.94</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.96</div><div class="cr-v vg">0.04</div><div class="cost-m">Med</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg2)"><div class="cr-ref"><strong>Sharafaldin</strong> 2018</div><div class="cr-m">RF · DDoS (CICIDS)</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.99</div><div class="cr-v vg">0.98</div><div class="cr-v vg">0.01</div><div class="cost-m">Med</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg2)"><div class="cr-ref"><strong>Sharafaldin</strong> 2018</div><div class="cr-m">RF · Infiltration</div><div class="cr-v vl">0.68</div><div class="cr-v vm">0.81</div><div class="cr-v vl">0.70</div><div class="cr-v vm">0.08</div><div class="cost-m">Med</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg2)"><div class="cr-ref"><strong>Yerlan</strong> 2018</div><div class="cr-m">XGBoost</div><div class="cr-v vg">0.96</div><div class="cr-v vg">0.98</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.03</div><div class="cost-m">Med</div><div class="xai-n">—</div></div>
+      <div class="cmp-gen-hdr" style="background:var(--bg3)"><div class="gen-dot" style="background:var(--g3)"></div><span style="color:#14532d">Generation 3 — Deep Learning (2018–2022) · Mean F1 ≈ 0.95 · High GPU cost · Opaque</span></div>
+      <div class="cmp-row" style="background:var(--bg3)"><div class="cr-ref"><strong>Kim et al.</strong> 2016</div><div class="cr-m">LSTM · temporal</div><div class="cr-v vg">0.95</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.95</div><div class="cr-v vg">0.04</div><div class="cost-h">High</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg3)"><div class="cr-ref"><strong>Wu et al.</strong> 2021</div><div class="cr-m">Transformer</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.99</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.02</div><div class="cost-h">High</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg3)"><div class="cr-ref"><strong>Andresini</strong> 2020</div><div class="cr-m">CNN + LSTM</div><div class="cr-v vg">0.96</div><div class="cr-v vg">0.98</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.02</div><div class="cost-h">High</div><div class="xai-n">—</div></div>
+      <div class="cmp-gen-hdr" style="background:var(--bg4)"><div class="gen-dot" style="background:var(--g4)"></div><span style="color:#92400e">Generation 4 — Hybrid (2022–2026) · Mean F1 ≈ 0.97 · Still single-layer</span></div>
+      <div class="cmp-row" style="background:var(--bg4)"><div class="cr-ref"><strong>Faker &amp; Dogru</strong> 2023</div><div class="cr-m">RF + Autoencoder</div><div class="cr-v vg">0.98</div><div class="cr-v vg">0.99</div><div class="cr-v vg">0.99</div><div class="cr-v vg">0.01</div><div class="cost-h">High</div><div class="xai-n">—</div></div>
+      <div class="cmp-row" style="background:var(--bg4)"><div class="cr-ref"><strong>Krishnan</strong> 2023</div><div class="cr-m">XGBoost + SHAP</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.98</div><div class="cr-v vg">0.97</div><div class="cr-v vg">0.02</div><div class="cost-m">Med</div><div class="xai-f">Full ✓</div></div>
+      <div class="cmp-row" style="background:var(--bg4)"><div class="cr-ref"><strong>Bahnsen</strong> 2016</div><div class="cr-m">RF + temporal (ecom)</div><div class="cr-v vg">0.94</div><div class="cr-v vg">0.96</div><div class="cr-v vg">0.95</div><div class="cr-v vg">0.04</div><div class="cost-m">Med</div><div class="xai-n">—</div></div>
+      <div class="cmp-gen-hdr" style="background:var(--bgs)"><div class="gen-dot" style="background:var(--gs)"></div><span style="color:#4c1d95;font-size:7px;font-weight:800">SoukDZ IDS — This Work (2026) · Cross-layer · Domain-specific · Full XAI</span></div>
+      <div class="cmp-row" style="background:var(--bgs);border-top:2px solid #8b5cf6"><div class="cr-ref"><strong>SoukDZ</strong> Layer 1</div><div class="cr-m">RF · SMOTE · SHAP</div><div class="cr-v vp">1.000</div><div class="cr-v vp">1.000</div><div class="cr-v vp">1.000</div><div class="cr-v vp">0.000</div><div class="cost-m">Med</div><div class="xai-p">Full ★</div></div>
+      <div class="cmp-row" style="background:var(--bgs)"><div class="cr-ref"><strong>SoukDZ</strong> Layer 2</div><div class="cr-m">RF · SMOTE · SHAP</div><div class="cr-v vp">1.000</div><div class="cr-v vp">1.000</div><div class="cr-v vp">1.000</div><div class="cr-v vp">0.000</div><div class="cost-l">Low</div><div class="xai-p">Full ★</div></div>
+    </div>
+    <div class="legend">
+      <div class="lc"><div class="ld" style="background:#94a3b8"></div><span class="lt">Gen 1 Classical</span></div>
+      <div class="lc"><div class="ld" style="background:#3b82f6"></div><span class="lt">Gen 2 ML</span></div>
+      <div class="lc"><div class="ld" style="background:#22c55e"></div><span class="lt">Gen 3 DL</span></div>
+      <div class="lc"><div class="ld" style="background:#f59e0b"></div><span class="lt">Gen 4 Hybrid</span></div>
+      <div class="lc"><div class="ld" style="background:#8b5cf6"></div><span class="lt">SoukDZ ★</span></div>
+      <span class="lt">DR = Detection Rate · FPR = False Positive Rate · XAI = Explainability</span>
+    </div>
+  </div>
+
+</div><!-- /mid -->
+
+<!-- ═══ RIGHT COLUMN ═══ -->
+<div class="cr2">
+
+  <!-- Radar SVG -->
+  <div>
+    <div class="sh"><div class="sn">10</div><div class="st">6-Dimension Radar</div><div class="divl"></div></div>
+    <div style="display:flex;justify-content:center">
+      <svg viewBox="-95 -95 190 200" width="186" height="186" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.25">
+          <polygon points="0,-28 24.2,-14 24.2,14 0,28 -24.2,14 -24.2,-14" fill="none" stroke="#94a3b8" stroke-width="0.6"/>
+          <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26" fill="none" stroke="#94a3b8" stroke-width="0.6"/>
+          <polygon points="0,-70 60.6,-35 60.6,35 0,70 -60.6,35 -60.6,-35" fill="none" stroke="#94a3b8" stroke-width="0.6"/>
+        </g>
+        <line x1="0" y1="0" x2="0" y2="-75" stroke="#e2e8f0" stroke-width="0.6"/>
+        <line x1="0" y1="0" x2="65" y2="-37.5" stroke="#e2e8f0" stroke-width="0.6"/>
+        <line x1="0" y1="0" x2="65" y2="37.5" stroke="#e2e8f0" stroke-width="0.6"/>
+        <line x1="0" y1="0" x2="0" y2="75" stroke="#e2e8f0" stroke-width="0.6"/>
+        <line x1="0" y1="0" x2="-65" y2="37.5" stroke="#e2e8f0" stroke-width="0.6"/>
+        <line x1="0" y1="0" x2="-65" y2="-37.5" stroke="#e2e8f0" stroke-width="0.6"/>
+        <!-- Gen 2 -->
+        <polygon points="0,-68 59,-34 59,26 0,52 -43,24 -22,-12" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1.2"/>
+        <!-- Gen 3 -->
+        <polygon points="0,-68 59,-34 59,26 0,16 -5,3 -22,-12" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="2,1.5"/>
+        <!-- SoukDZ -->
+        <polygon points="0,-75 65,-37.5 65,37.5 0,56 -65,37.5 -65,-37.5" fill="rgba(139,92,246,0.18)" stroke="#8b5cf6" stroke-width="2.2"/>
+        <!-- Labels -->
+        <text x="0" y="-81" text-anchor="middle" font-size="6.5" fill="#1e293b" font-weight="700" font-family="Inter,sans-serif">Detection Rate</text>
+        <text x="74" y="-43" text-anchor="start" font-size="6.5" fill="#1e293b" font-weight="700" font-family="Inter,sans-serif">AUC-ROC</text>
+        <text x="74" y="47" text-anchor="start" font-size="6.5" fill="#1e293b" font-weight="700" font-family="Inter,sans-serif">Low FPR</text>
+        <text x="0" y="90" text-anchor="middle" font-size="6.5" fill="#1e293b" font-weight="700" font-family="Inter,sans-serif">Low Cost</text>
+        <text x="-74" y="47" text-anchor="end" font-size="6.5" fill="#1e293b" font-weight="700" font-family="Inter,sans-serif">Explainability</text>
+        <text x="-74" y="-43" text-anchor="end" font-size="6.5" fill="#1e293b" font-weight="700" font-family="Inter,sans-serif">Domain Spec.</text>
+        <!-- Legend -->
+        <rect x="-90" y="73" width="8" height="6" rx="1" fill="#3b82f6"/>
+        <text x="-80" y="79" font-size="5.5" fill="#555" font-family="Inter,sans-serif">Gen 2 ML</text>
+        <rect x="-90" y="82" width="8" height="6" rx="1" fill="#22c55e"/>
+        <text x="-80" y="88" font-size="5.5" fill="#555" font-family="Inter,sans-serif">Gen 3 DL</text>
+        <rect x="-10" y="73" width="8" height="6" rx="1" fill="#8b5cf6"/>
+        <text x="0" y="79" font-size="5.5" fill="#4c1d95" font-weight="700" font-family="Inter,sans-serif">SoukDZ IDS</text>
+      </svg>
+    </div>
+    <p style="font-size:6.5px;color:#666;text-align:center;margin-top:-4px;font-style:italic">SoukDZ covers the full area on 5 of 6 dimensions</p>
+  </div>
+
+  <!-- Key Results with SVG icons -->
+  <div>
+    <div class="sh"><div class="sn">11</div><div class="st">Key Results</div><div class="divl"></div></div>
+    <div class="results-big">
+      <div class="rc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="rc-num">1.000</div>
+        <div class="rc-lbl">F1-Score &amp; AUC<br>both detection layers</div>
+      </div>
+      <div class="rc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="rc-num">10s</div>
+        <div class="rc-lbl">Detection delay<br>all 5 scenarios</div>
+      </div>
+      <div class="rc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="rc-num">100%</div>
+        <div class="rc-lbl">Detection rate<br>5 Kali scenarios</div>
+      </div>
+      <div class="rc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        <div class="rc-num" style="font-size:14px">0 FP</div>
+        <div class="rc-lbl">False positives vs<br>4,861 legit entries</div>
+      </div>
+    </div>
+    <div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:4px;padding:6px 8px">
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:3px">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#14532d" stroke-width="2.5" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span style="font-size:7px;font-weight:700;color:#14532d">Kali Linux Validation Campaign · 24 May 2026</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;font-size:6.5px;color:#166534">
+        <div>&#10003; Hydra v9.5 brute force</div>
+        <div>&#10003; Credential stuffing</div>
+        <div>&#10003; Nikto v2.5.0 recon</div>
+        <div>&#10003; Catalog scraping</div>
+        <div>&#10003; Mass fake accounts</div>
+        <div>&#10003; n=70,133 CICIDS test</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explainability -->
+  <div>
+    <div class="sh"><div class="sn">12</div><div class="st">Explainability Score</div><div class="divl"></div></div>
+    <div class="xai-row"><div class="xai-lbl">Classical stat.</div><div class="xai-track"><div class="xai-fill" style="width:50%;background:#94a3b8"></div></div><div class="xai-tag" style="color:#94a3b8">Partial</div></div>
+    <div class="xai-row"><div class="xai-lbl">ML Ensembles</div><div class="xai-track"><div class="xai-fill" style="width:5%;background:#3b82f6"></div></div><div class="xai-tag" style="color:#94a3b8">None</div></div>
+    <div class="xai-row"><div class="xai-lbl">Deep Learning</div><div class="xai-track"><div class="xai-fill" style="width:5%;background:#22c55e"></div></div><div class="xai-tag" style="color:#94a3b8">None</div></div>
+    <div class="xai-row"><div class="xai-lbl">Hybrid Gen 4</div><div class="xai-track"><div class="xai-fill" style="width:30%;background:#f59e0b"></div></div><div class="xai-tag" style="color:#d97706">Partial</div></div>
+    <div class="xai-row"><div class="xai-lbl" style="font-weight:700;color:#4c1d95">SoukDZ IDS</div><div class="xai-track" style="background:#ede9fe;border:1.5px solid #8b5cf6"><div class="xai-fill" style="width:100%;background:linear-gradient(90deg,#8b5cf6,#6d28d9)"></div></div><div class="xai-tag" style="color:#4c1d95;font-weight:800">Full ★</div></div>
+    <p style="font-size:6px;color:#94a3b8;font-style:italic;margin-top:3px;text-align:center">SHAP TreeSHAP — per-alert top-3 feature attribution</p>
+  </div>
+
+  <!-- Perspectives with SVG -->
+  <div>
+    <div class="sh"><div class="sn">13</div><div class="st">Research Perspectives</div><div class="divl"></div></div>
+    <div class="persp">
+      <div class="persp-num">1</div>
+      <div class="persp-text">Production data retraining on real SoukDZ logs within 60 days of deployment</div>
+    </div>
+    <div class="persp">
+      <div class="persp-num">2</div>
+      <div class="persp-text">Streaming log-tailing to reduce detection latency below 1 second</div>
+    </div>
+    <div class="persp">
+      <div class="persp-num">3</div>
+      <div class="persp-text">Federated learning across multiple Algerian e-commerce platforms</div>
+    </div>
+    <div class="persp">
+      <div class="persp-num">4</div>
+      <div class="persp-text">Graph Neural Networks for coordinated fraud ring detection</div>
+    </div>
+    <div class="persp">
+      <div class="persp-num">5</div>
+      <div class="persp-text">Adversarial robustness against threshold-aware evasion strategies</div>
+    </div>
+  </div>
+
+  <!-- Conclusion -->
+  <div>
+    <div class="sh"><div class="sn">14</div><div class="st">Conclusion</div><div class="divl"></div></div>
+    <div class="conclusion">
+      <div class="conclusion-text">The <strong>first IDS simultaneously addressing cross-layer correlation, marketplace domain specificity, and full SHAP explainability</strong>. After 30 years of IDS research, the remaining frontier is architectural — <strong>no published system fuses network and application behavioral signals for a marketplace threat model</strong>. SoukDZ fills that gap with a deployable, explainable, production-ready architecture.</div>
+    </div>
+  </div>
+
+</div><!-- /right -->
 </div><!-- /body -->
 
 <!-- FOOTER -->
 <div class="ft">
   <div class="ft-l">ESTIN — Laboratoire LITAN · RN 75, Amizour 06300, Bejaia, Algeria</div>
   <div class="ft-c">Master in Computer Science — Cybersecurity · 2025–2026</div>
-  <div class="ft-r">Supervisors: Mme Amara Karima (ESTIN) · Pr. Naït Abdesselam Farid (Univ. Paris Cité)</div>
+  <div class="ft-r">Mme Amara Karima (ESTIN) · Pr. Naït Abdesselam Farid (Univ. Paris Cité)</div>
 </div>
 
 </div><!-- /poster -->
